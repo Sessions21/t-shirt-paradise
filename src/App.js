@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
-import Home from './Pages/Home';
-import Login from './Pages/Login';
-import User from './Pages/User';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import User from './pages/User';
 import About from './pages/About';
 import Gallery from './pages/Gallery';
-import Contact from './Pages/Contact';
+import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import "./App.css"
 
