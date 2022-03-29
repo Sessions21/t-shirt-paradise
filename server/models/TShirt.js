@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const dateFormat = require("../utils/dateFormat");
 
 const tShirtSchema = new Schema(
   {
@@ -27,8 +28,38 @@ const tShirtSchema = new Schema(
     createdAt: {
       type: Date,
       default: Date.now,
+      get: (createdAtVal) => dateFormat(createdAtVal),
     },
-    // comments
+    // Use comment schema
+    comments: [CommentSchema],
+  }
+);
+
+const CommentSchema = new Schema(
+  {
+    writtenBy: {
+      type: String,
+      required: true,
+    },
+    commentBody: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+      get: (createdAtVal) => dateFormat(createdAtVal),
+    },
+    // use ReplySchema to validate data for a reply
+    // replies: [ReplySchema],
+  },
+  {
+    toJSON: {
+      virtuals: true,
+      getters: true,
+    },
+    id: false,
   }
 );
 
