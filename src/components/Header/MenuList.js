@@ -8,6 +8,10 @@ export const MenuList = [
     url:"/login"
   },
   {
+    title: "Signup",
+    url:"/signup"
+  },
+  {
     title: "User",
     url:"/user"
   },

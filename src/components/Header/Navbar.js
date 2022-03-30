@@ -5,6 +5,7 @@ function Nav() {
   const [links] = useState([
     { url: "/", name: 'Home'},
     { url: "/login", name: 'Login'},
+    { url: "/signup", name: 'signup'},
     { url: "/user", name: 'User'},
     { url: "/about", name: 'About'},
     { url: "/gallery", name: 'Gallery'},
