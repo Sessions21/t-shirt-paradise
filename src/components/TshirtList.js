@@ -5,7 +5,10 @@ const TshirtList = ({ category }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentTshirt, setCurrentTshirt] = useState();
 
-  const [Tshirts] = useState([]);
+  const [Tshirts] = useState([
+
+    
+  ]);
 
   const currentTshirts = Tshirts.filter(tshirt => tshirt.category === category);
 
