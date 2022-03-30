@@ -6,7 +6,6 @@ const TshirtList = ({ category }) => {
   const [currentTshirt, setCurrentTshirt] = useState();
 
   const [Tshirts] = useState([
-
     
   ]);
 
