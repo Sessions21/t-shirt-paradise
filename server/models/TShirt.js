@@ -15,10 +15,6 @@ const tShirtSchema = new Schema(
       type: String,
       trim: true
     },
-    category: {
-      type: String,
-      trim: true
-    },
     createdBy: {
       type: String,
       required: true,
@@ -28,7 +24,17 @@ const tShirtSchema = new Schema(
       type: Date,
       default: Date.now,
     },
-    // comments
+    // image or images maybe make it it's own schema
+    
+    // move category to its own schema
+    /*
+    category: {
+      type: String,
+      trim: true
+    },
+    */
+
+    // comments, create comment model
   }
 );
 
