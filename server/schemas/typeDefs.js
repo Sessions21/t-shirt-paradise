@@ -7,7 +7,12 @@ const typeDefs = gql`
     writtenBy: String
     commentBody: String
     createdAt: String
-    }
+  }
+
+  type Image {
+    _id: ID
+    imageLink: String
+  }
 
   type TShirt {
     _id: ID
@@ -16,7 +21,7 @@ const typeDefs = gql`
     description: String
     createdBy: String
     createdAt: String
-    imageLink: String
+    images: [Image]
     comments: [Comment]
   }
 
@@ -29,7 +34,7 @@ const typeDefs = gql`
 
   type Query {
     user(username: String!): User
-    tshirt(createdBy: String!): TShirt
+    tshirt(_id: ID!): TShirt
     tshirts: [TShirt]
   }
 

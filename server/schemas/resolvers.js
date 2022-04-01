@@ -5,8 +5,8 @@ const resolvers = {
     user: async (parent, args) => {
       return await User.findOne({ username: args.username });
     },
-    tshirt: async (parent, args) => {
-      return await TShirt.findOne({ createdBy: args.username })
+    tshirt: async (parent, { _id }) => {
+      return await TShirt.findOne({ _id })
         .populate('comments');
     },
     tshirts: async () => {
@@ -16,9 +16,9 @@ const resolvers = {
   Mutation: {
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
-      
+
       // need to add all the auth processes
-      
+
       return user;
     },
     //sign up

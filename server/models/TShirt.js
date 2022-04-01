@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { Schema, Types } = mongoose;
 // const dateFormat = require("../utils/dateFormat");
 
 const tShirtSchema = new Schema(
@@ -26,13 +26,10 @@ const tShirtSchema = new Schema(
       default: Date.now,
       // get: (createdAtVal) => dateFormat(createdAtVal),
     },
-    images: [
-      {
-        type: String,
-        required: true,
-        trim: true
-      }
-    ],
+    images: {
+      type: Array,
+      default: []
+    },
     // reference to comment model
     comments: [
       {
