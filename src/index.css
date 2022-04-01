@@ -6,26 +6,8 @@
 }
 
 
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 40px 100px;
-  z-index: 1000;
-  display: flex;
-  /* align-items: center; */
-  /* justify-content: space-between; */
-}
-
 .container {
   margin: 0;
-}
-
-body {
-  min-height: 100%;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -33,6 +15,7 @@ body {
   padding: 0;
   background: lightblue;
   color: #b47555;
+  min-height: 100%;
 }
 
 .background{
@@ -51,6 +34,19 @@ body {
   justify-content: space-between;
 }
 
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* header page titl */
 .name {
   color: #4a7896;
   font-size:3vw;
@@ -75,6 +71,14 @@ body {
   font-weight: 500;
 }
 
+.t:hover {
+  color: #4a7896;
+}
+
+.shirt:hover {
+  color: #4a7896;
+}
+
 .dash {
   color: #9c6244;
   font-size:3vw;
@@ -84,6 +88,8 @@ body {
 a:hover {
   text-decoration: none;
 }
+
+/*Start nav styling*/
 
 .nav {
   display: flex;
@@ -108,6 +114,39 @@ a:hover {
 .nav li {
   cursor: pointer;
   color: #3d627b;
+}
+
+/*home page middle styling*/
+.start {
+  color: #9c6244;
+  position: absolute;
+  top: 45%;
+  left: 8%;
+}
+
+.start h2 {
+  font-size: 5vh;
+  font-weight: bold
+}
+
+.love {
+  color: white;
+  font-weight: bold;
+  text-shadow: 8px 8px #4a7896;
+  font-size: 6vh;
+}
+
+.startButton {
+  background: rgb(102, 102, 102);
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .5);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  padding: 10px 15px;
 }
 
 textarea {
