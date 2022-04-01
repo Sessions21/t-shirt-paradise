@@ -16,6 +16,7 @@ const typeDefs = gql`
     description: String
     createdBy: String
     createdAt: String
+    imageLink: String
     comments: [Comment]
   }
 
@@ -34,7 +35,11 @@ const typeDefs = gql`
 
   type Mutation {
     login(email: String!, password: String!): User
+    signUp(username: String, email: String, password: String): User
     addUser(username: String!, email: String!, password: String!): User
+    addTShirt(title: String!, brand: String, description: String, createdBy: String, createdAt: String, imageLink: String!): TShirt
+    addComment(TShirt: ID!, writtenBy: String!, commentBody: String, createdAt: String): TShirt
+    deleteTShirt(_id: ID!): TShirt
   }
 `;
 

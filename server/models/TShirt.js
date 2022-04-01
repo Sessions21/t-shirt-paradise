@@ -26,11 +26,14 @@ const tShirtSchema = new Schema(
       default: Date.now,
       // get: (createdAtVal) => dateFormat(createdAtVal),
     },
-    // image or image arr. Might work better with image as it's own schema
-
-    // category currently in it's own file might be able to just add it to tshirt
-
-    // Use comment schema
+    images: [
+      {
+        type: String,
+        required: true,
+        trim: true
+      }
+    ],
+    // reference to comment model
     comments: [
       {
         type: Schema.Types.ObjectId,
