@@ -12,6 +12,7 @@ const Footer = () => {
             </div>
             <ul className="list-inline">
                 <li className="list-inline-item"><a href="/">Home</a></li>
+                <li className="list-inline-item"><a href="/create">Create</a></li>
                 <li className="list-inline-item"><a href="/gallery">Gallery</a></li>
                 <li className="list-inline-item"><a href="/user">User</a></li>
                 <li className="list-inline-item"><a href="/about">About</a></li>

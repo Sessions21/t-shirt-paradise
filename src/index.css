@@ -41,7 +41,8 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.50;
+  opacity: 0.65;
+  object-fit: cover;
 }
 
 .flex-row {
@@ -193,7 +194,6 @@ li {
 }
 
 .footer {
-  padding:40px 0;
   color:black;
   width: 100%;
   position: absolute;
@@ -216,7 +216,6 @@ li {
 .footer li {
   padding:0 10px;
   color: #3d627b;
-  font-weight: bold;
 }
 
 .footer ul a {
@@ -250,11 +249,11 @@ li {
   width:65px;
   height:65px;
   display:inline-block;
-  /* text-align:center; */
+  text-align:center;
   border-radius:50%;
-  border:3px solid #b47555;
+  border:3px solid #3d627b;
   margin:0 25px;
-  color:#3d627b;
+  color:#9c6244;
   opacity:0.75;
 }
 
