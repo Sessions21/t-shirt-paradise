@@ -5,9 +5,11 @@ import Header from './components/Header/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from'./pages/Signup';
+import Create from './pages/CreateTshirt';
+import Edit from './pages/EditTshirt';
+import Gallery from './pages/Gallery';
 import User from './pages/User';
 import About from './pages/About';
-import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Footer from './components/Footer';
 import "./index.css"
@@ -26,9 +28,11 @@ function App() {
             <Route path="/" element={ <Home /> } />
             <Route path="/login" element={ <Login /> } />
             <Route path='/signup' element={ <Signup />} />
+            <Route path="/create" element={ <Create /> } />
+            <Route path="/edit/:id" element={ <Edit /> } />
+            <Route path="/gallery" element={ <Gallery /> } />
             <Route path="/user" element={ <User /> } />
             <Route path="/about" element={ <About /> } />
-            <Route path="/gallery" element={ <Gallery /> } />
             <Route path="/contact" element={ <Contact /> } />
           </Routes>
           <Footer />

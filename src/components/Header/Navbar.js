@@ -5,10 +5,12 @@ function Nav() {
   const [links] = useState([
     { url: "/", name: 'Home'},
     { url: "/login", name: 'Login'},
-    { url: "/signup", name: 'signup'},
+    { url: "/signup", name: 'Signup'},
+    { url: "/create", name: 'Create'},
+    { url: "/edit/:id", name: 'Edit'},
+    { url: "/gallery", name: 'Gallery'},
     { url: "/user", name: 'User'},
     { url: "/about", name: 'About'},
-    { url: "/gallery", name: 'Gallery'},
     { url: "/contact", name: 'Contact'},
   ]);
 
