@@ -14,6 +14,14 @@ const resolvers = {
     }
   },
   Mutation: {
+    login: async (parent, { email, password }) => {
+      const user = await User.findOne({ email });
+      
+      // need to add all the auth processes
+      
+      return user;
+    },
+    //sign up
     addUser: async (parent, args) => {
       return await User.create(args);
     },
