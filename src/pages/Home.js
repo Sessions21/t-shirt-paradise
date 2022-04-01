@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import coverImage from "../assets/images/cover-2.png"
 
 function Home() {
   return (
-    <div>Home</div>
+    <div className='showcase'>
+      <img className="background" src={coverImage} alt="paradise scene"></img>
+    </div>
   )
 }
 

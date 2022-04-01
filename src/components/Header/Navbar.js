@@ -15,7 +15,7 @@ function Nav() {
   const [currentUrl, setCurrentUrl] = useState(links[0]);
 
   return (
-    <nav>
+    <nav className="nav">
       <ul className="flex-row">
         {links.map((link) => (
           <li 
