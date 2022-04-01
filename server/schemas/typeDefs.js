@@ -7,7 +7,12 @@ const typeDefs = gql`
     writtenBy: String
     commentBody: String
     createdAt: String
-    }
+  }
+
+  type Image {
+    _id: ID
+    imageLink: String
+  }
 
   type TShirt {
     _id: ID
@@ -16,6 +21,7 @@ const typeDefs = gql`
     description: String
     createdBy: String
     createdAt: String
+    images: [Image]
     comments: [Comment]
   }
 
@@ -28,13 +34,16 @@ const typeDefs = gql`
 
   type Query {
     user(username: String!): User
-    tshirt(createdBy: String!): TShirt
+    tshirt(_id: ID!): TShirt
     tshirts: [TShirt]
   }
 
   type Mutation {
     login(email: String!, password: String!): User
     addUser(username: String!, email: String!, password: String!): User
+    addTShirt(title: String!, brand: String, description: String, createdBy: String, createdAt: String, imageLink: String!): TShirt
+    addComment(TShirt: ID!, writtenBy: String!, commentBody: String, createdAt: String): TShirt
+    deleteTShirt(_id: ID!): TShirt
   }
 `;
 
