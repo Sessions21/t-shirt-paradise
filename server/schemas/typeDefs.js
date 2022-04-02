@@ -32,6 +32,11 @@ const typeDefs = gql`
     password: String
   }
 
+  type Auth {
+    token: ID
+    user: User
+  }
+
   type Query {
     user(username: String!): User
     tshirt(_id: ID!): TShirt
@@ -39,8 +44,8 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    login(email: String!, password: String!): User
-    addUser(username: String!, email: String!, password: String!): User
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
     addTShirt(title: String!, brand: String, description: String, createdBy: String, createdAt: String, imageLink: String!): TShirt
     addComment(TShirt: ID!, writtenBy: String!, commentBody: String, createdAt: String): TShirt
     deleteTShirt(_id: ID!): TShirt
