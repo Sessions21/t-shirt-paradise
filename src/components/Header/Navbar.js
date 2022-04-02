@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 function Nav() {
   const [links] = useState([
     { url: "/", name: 'Home'},
-    { url: "/login", name: 'Login'},
-    { url: "/signup", name: 'Signup'},
+    { url: "/login", name: 'Login/Register'},
     { url: "/create", name: 'Create'},
     { url: "/edit/:id", name: 'Edit'},
     { url: "/gallery", name: 'Gallery'},
