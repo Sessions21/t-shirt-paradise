@@ -1,5 +1,22 @@
 import { gql } from '@apollo/client';
 
+export const QUERY_ALLTSHIRTS = gql`
+    {
+        tshirts 
+        {
+            _id
+            title
+            brand
+            description
+            createdBy
+            createdAt
+            images {
+                imageLink
+            }
+        }
+    }
+`;
+
 export const QUERY_tshirts = gql`
     query tshirts($username: String) {
         tshirts(username: $username) {

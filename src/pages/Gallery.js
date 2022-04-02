@@ -5,9 +5,10 @@ function Gallery(props) {
   const { currentCategory } = props;
   return (
     <section>
-      <h1 data-testid="h1tag">{(currentCategory.name)}</h1>
+      {/* <h1 data-testid="h1tag">{(currentCategory.name)}</h1>
       <p>{currentCategory.description}</p>
-      <TshirtList category={currentCategory.name} />
+      <TshirtList category={currentCategory.name} /> */}
+      <TshirtList />
     </section>
   );
 }

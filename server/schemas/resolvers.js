@@ -10,6 +10,7 @@ const resolvers = {
         .populate('comments');
     },
     tshirts: async () => {
+      console.log('Called get all tshirts');
       return await TShirt.find()
     }
   },

@@ -15,12 +15,17 @@ import Footer from './components/Footer';
 import "./index.css"
 
 function App() {
-  const client = new ApolloClient({ 
+  const httpLink = createHttpLink({
+    uri: 'http://localhost:3001/graphql',
+  })
+
+  const client = new ApolloClient({
+    link: httpLink,
     cache: new InMemoryCache()
   })
 
   return (
-    <ApolloProvider client= { client }>
+    <ApolloProvider client={client}>
       <div className='container'>
         <BrowserRouter>
           <Header />
