@@ -5,12 +5,9 @@
   font-family: 'Lexend Deca', sans-serif;
 }
 
-
 .container {
-  margin: 0;
-  display: inline-block;
-  flex-direction: column;
-  flex-wrap: wrap;
+  position: inline-block;
+  display: flex;
 }
 
 body {
@@ -20,6 +17,10 @@ body {
   color: #b47555;
   min-height: 100%;
   display: inline-block;
+}
+
+li {
+  list-style: none;
 }
 
 .background{
@@ -126,12 +127,13 @@ a:hover {
 .start {
   color: #9c6244;
   position: absolute;
+  display: inline-block;
   top: 45%;
   left: 8%;
 }
 
 .start h2 {
-  font-size: 3vw;
+  font-size: 2.75vw;
   font-weight: bold
 }
 
@@ -149,9 +151,8 @@ a:hover {
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 1.75vw;
   font-weight: 400;
-  margin-bottom: 30px;
   padding: 10px 15px;
   opacity: .80;
 }
@@ -165,99 +166,87 @@ a:hover {
   color: lightblue;
 }
 
-/*login and signup page styling*/
+/*login styling*/
 
-.login {
-  display: inline-block;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
+.form-input {
+  margin: 8px;
+  display: block;
 }
-
-.signup {
-  display: flex-start;
-  justify-content: center;
-  align-items: center;
-  overflow: auto;
-}
-
-.break {
-  position: absolute;
-  right: 68%;
-  top: 60%;
-  font-size: 3vh;
-  font-weight: 400;
-  color:white
-} 
 
 .loginContainer {
-  display: flex-start;
-  position: absolute;
-  top: 30%;
-  right: 60%;
-  height: 40%;
   width: 30%;
-  background: #3d627b;
-  opacity: .95;
-  overflow: auto;
+  position: absolute;
+  top: 25%;
+  left: 12%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fieldSetLogin {
+  margin: 2em 0;
+  padding: 1em 2em;
+  border: 3px solid #9c6244;
+  border-radius: 6px;
+  min-width: 200px;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.fieldSetLogin p {
+  color:white;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.loginSubmit {
+  padding: .5em 1em;
+  border-radius: 6px;
+  background-color: #294353;
+  color: white;
+  font-size: .8em;
+  font-weight: 400;
+}
+
+/*signup styling*/
+
+.form-input {
+  margin: 5px;
 }
 
 .signupContainer {
-  display: flex-start;
-  position: absolute;
-  top: 30%;
-  left: 60%;
-  height: 40%;
   width: 30%;
-  background: #b47555;
-  color: #3d627b;
-  opacity: .85;
-  overflow: auto;
+  position: absolute;
+  top: 25%;
+  right: 12%;
 }
 
-.card-header {
-  line-height: 5vh;
-  text-align: center;
-  font-size: 4vh;
-  background-color: white;
+.fieldSetSignup {
+  margin: 2em 0;
+  padding: 1em 2em;
+  border: 3px solid #9c6244;
+  border-radius: 6px;
+  min-width: 200px;
+  font-size: 1.25em;
+  font-weight: 500;
 }
 
-.formLogin  input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-  width: 100%;
-  background-color: white;
-  line-height: 35px;
-  font-size: 30px;
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .5);
-  overflow: auto;
-}
-
-.formSignup  input {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
-  width: 100%;
-  background-color: white;
-  line-height: 35px;
-  font-size: 30px;
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .5);
-  overflow: auto;
-}
-
-.btn {
-  background: rgb(102, 102, 102);
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .5);
-  border: 0;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-  font-size: 25px;
+.fieldSetSignup p {
+  color:white;
   font-weight: 400;
-  margin-bottom: 30px;
-  padding: 10px 15px;
+  overflow: hidden;
 }
+
+.signupSubmit {
+  padding: .5em 1em;
+  border-radius: 6px;
+  background-color: #294353;
+  color: white;
+  font-size: .8em;
+  font-weight: 400;
+}
+
+/*Modal Style*/
+
 
 .img-thumbnail {
   width: auto;
@@ -304,74 +293,128 @@ button {
   padding: 10px 15px;
 }
 
-form {
-  width: 80%;
+/* contact styling */
+.contact {
+  width: 30%;
+  position: absolute;
+  top: 15%;
+  left: 35%;
+}
+
+fieldset {
+  margin: 2em 0;
+  padding: 1em 2em;
+  border: 2px solid #9c6244;
+  border-radius: 6px;
+  min-width: 200px;
+  overflow: hidden;
+}
+
+legend {
+  font-size: 1.25em;
+  padding: 0 .25em;
+  color: #3d627b;
+  width: auto;
+}
+
+.form-input {
+  margin: 5px;
+}
+
+/* Contact Labels */
+
+
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+button {
+  display: block;
+  margin-top: 1em;
+}
+
+label:first-of-type {
+  margin-top: 0;
 }
 
 input {
-  font-size: 1rem;
-  padding: 0.25rem;
-  border: 1px solid grey;
-  outline: none;
-  border-radius: 3px;
-  transition: 0.2s;
-  font-size: 5;
+  padding: .5em;
+  border: solid 1px #3d627b;
+}
+
+input[type="email"], input[type="text"] {
+  width: 15em;
 }
 
 textarea {
-  width: 600px;
-  height: 120px;
-  border: 3px solid #cccccc;
-  padding: 5px;
+  min-height: 8em;
+  min-width: 100%;
+  padding: .5em;
+  border: solid 1px #3d627b;
+}
+
+.contactSubmit {
+  padding: .5em 1em;
+  border-radius: 6px;
+  background-color: #294353;
+  color: white;
+  font-size: .8em;
+  font-weight: 400;
 }
 
 input:focus {
-  border: 1px solid lightgrey;
+  border: 1px solid v #9c6244;
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
+} 
+
+.error-text {
+  font-weight: 600;
+  color: rgb(145, 3, 3);
 }
 
-li {
-  list-style: none;
-}
-
+/* Footer Styling */
 .footer {
-  color:black;
   width: 100%;
   position: absolute;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content:center;
   z-index: 1000;
   bottom: 0;
+  font-weight: 300;
 }
 
 .footer ul {
-  padding:0;
-  list-style:none;
-  text-align:center;
-  font-size:18px;
-  line-height:1.6;
-  margin-bottom:0;
+  /* padding:0; */
+  list-style: none;
+  text-align: center;
+  font-size: 2vw;
+  height: 40px;
 }
 
 .footer li {
   padding:0 10px;
-  color: #3d627b;
+  line-height: 3vw;
+  color: #294353;
+  font-size:2vw;
 }
 
 .footer ul a {
   color:inherit;
   text-decoration:none;
   opacity:0.8;
-  font-size: 30px;
+  font-size: 2vw;
+  line-height: 2vw;
 }
 
 .footer p {
   color: #9c6244;
   text-decoration:none;
   opacity:0.8;
-  font-size: 30px;
-  margin-top: 10px;
+  font-size: 2vw;
+  margin: 0;
 }
 
 .footer ul a:hover {
@@ -382,17 +425,17 @@ li {
 
 .footer .social {
   text-align:center;
-  padding-bottom:25px;
 }
 
 .footer .social > a {
-  font-size:40px;
-  width:65px;
-  height:65px;
+  font-size:2.5vw;
+  width:3.5vw;
+  height:3.5vw;
   display:inline-block;
   text-align:center;
+  align-items: center;
   border-radius:50%;
-  border:3px solid #3d627b;
+  border:2px solid #294353;
   margin:0 25px;
   color:#9c6244;
   opacity:0.75;
@@ -411,23 +454,52 @@ li {
 
 @media(max-width: 768px) {
   .name {
-    font-size:4vw;
+    font-size:40px;
     font-weight:400;
   }
   
   .t {
-    font-size:4vw;
+    font-size:40px;
   }
   
   .shirt {
-    font-size:4vw;
+    font-size: 40px;
   }
   
   .dash {
-    font-size:4vw;
+    font-size:40px;
   }
 
   .titleDesc {
-    font-size: 4vw;
+    font-size: 35px;
+  }
+  .nav a {
+    font-size: 20px;
+  }
+  .start h2 {
+    font-size: 25px;
+    display: inline-block;
+  }
+  .love {
+    font-size: 25px;
+    display: inline-block;
+  }
+  .startButton {
+    font-size: 20px;
+  }
+}
+
+@media(max-width: 930px) {
+  .footer .social > a {
+    font-size:35px;
+    width:50px;
+    height:50px;
+  }
+  .footer ul a {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .footer p {
+    font-size: 20px;
   }
 }
