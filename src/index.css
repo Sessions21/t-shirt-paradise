@@ -8,7 +8,7 @@
 
 .container {
   margin: 0;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -19,6 +19,7 @@ body {
   background: lightblue;
   color: #b47555;
   min-height: 100%;
+  display: inline-block;
 }
 
 .background{
@@ -33,6 +34,7 @@ body {
 
 .flex-row {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -42,35 +44,31 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 40px 100px;
+  padding: 20px 50px;
   z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: inline-block;
 }
 
 /* header page titl */
 .name {
   color: #4a7896;
-  font-size:3vw;
+  font-size:3.5vw;
   font-weight:300;
 }
 
 .name:hover {
   color: #b47555;
-  font-size:3vw;
-  font-weight:300;
 }
 
 .t {
   color: white;
-  font-size:3vw;
+  font-size:3.5vw;
   font-weight: 500;
 }
 
 .shirt {
   color: white;
-  font-size:3vw;
+  font-size:3.5vw;
   font-weight: 500;
 }
 
@@ -92,6 +90,11 @@ a:hover {
   text-decoration: none;
 }
 
+.titleDesc {
+  font-size: 3vw;
+  font-weight: 250;
+}
+
 /*Start nav styling*/
 
 .nav {
@@ -104,7 +107,7 @@ a:hover {
 
 .nav a {
   color: #3d627b;
-  font-size: 3.5vh;
+  font-size: 1.30vw;
   font-weight: 300;
   margin-left: 20px;
 }
@@ -128,7 +131,7 @@ a:hover {
 }
 
 .start h2 {
-  font-size: 5vh;
+  font-size: 3vw;
   font-weight: bold
 }
 
@@ -136,7 +139,7 @@ a:hover {
   color: white;
   font-weight: bold;
   text-shadow: 8px 8px #4a7896;
-  font-size: 6vh;
+  font-size: 3vw;
 }
 
 .startButton {
@@ -165,15 +168,17 @@ a:hover {
 /*login and signup page styling*/
 
 .login {
-  display: inline;
+  display: inline-block;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 }
 
 .signup {
   display: flex-start;
   justify-content: center;
   align-items: center;
+  overflow: auto;
 }
 
 .break {
@@ -190,10 +195,11 @@ a:hover {
   position: absolute;
   top: 30%;
   right: 60%;
-  height: 30%;
+  height: 40%;
   width: 30%;
   background: #3d627b;
   opacity: .95;
+  overflow: auto;
 }
 
 .signupContainer {
@@ -201,11 +207,12 @@ a:hover {
   position: absolute;
   top: 30%;
   left: 60%;
-  height: 30%;
+  height: 40%;
   width: 30%;
   background: #b47555;
   color: #3d627b;
   opacity: .85;
+  overflow: auto;
 }
 
 .card-header {
@@ -224,6 +231,7 @@ a:hover {
   line-height: 35px;
   font-size: 30px;
   box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .5);
+  overflow: auto;
 }
 
 .formSignup  input {
@@ -235,6 +243,7 @@ a:hover {
   line-height: 35px;
   font-size: 30px;
   box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .5);
+  overflow: auto;
 }
 
 .btn {
@@ -296,7 +305,7 @@ button {
 }
 
 form {
-  width: 40%;
+  width: 80%;
 }
 
 input {
@@ -305,7 +314,8 @@ input {
   border: 1px solid grey;
   outline: none;
   border-radius: 3px;
-  transition: box-shadow 0.2s;
+  transition: 0.2s;
+  font-size: 5;
 }
 
 textarea {
@@ -396,5 +406,28 @@ li {
 @media(max-width: 1256px) {
   .background {
     object-fit: cover;
+  }
+}
+
+@media(max-width: 768px) {
+  .name {
+    font-size:4vw;
+    font-weight:400;
+  }
+  
+  .t {
+    font-size:4vw;
+  }
+  
+  .shirt {
+    font-size:4vw;
+  }
+  
+  .dash {
+    font-size:4vw;
+  }
+
+  .titleDesc {
+    font-size: 4vw;
   }
 }

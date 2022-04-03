@@ -1,7 +1,7 @@
 import React from 'react';
-import fakeData from '../../fakeData';
+import fakeData from '../fakeData';
 import {useState} from 'react';
-import UserInfo from '../UserInfo/UserInfo'
+import UserInfo from '../components/UserInfo/UserInfo'
 import TshirtList from '../components/TshirtList'
 
 const User = () => {

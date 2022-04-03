@@ -73,7 +73,7 @@ const Login = (props) => {
             {error && <div>Login failed...</div>}
           </div>
       </div>
-      <p className='break'> Not A Member? Sign up </p>
+      <p className='break'> Not A Member? Register </p>
       <Signup />
     </main>
   );
