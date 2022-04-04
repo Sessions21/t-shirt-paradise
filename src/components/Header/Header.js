@@ -7,7 +7,7 @@ function Header() {
     <header className="flex-row">
       <h1>
         <a className="name" href="/"><span className="t">T</span><span className="dash">-</span><span className="shirt">Shirt</span> Paradise</a>
-        <span><p>The Enthusiast's Forum</p></span>
+        <span><p className="titleDesc">An Enthusiast's Forum</p></span>
       </h1>
       <Nav />
     </header>

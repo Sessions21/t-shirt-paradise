@@ -4,7 +4,6 @@ import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@ap
 import Header from './components/Header/Header';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import Signup from'./pages/Signup';
 import Create from './pages/CreateTshirt';
 import Edit from './pages/EditTshirt';
 import Gallery from './pages/Gallery';
@@ -32,7 +31,6 @@ function App() {
           <Routes>
             <Route path="/" element={ <Home /> } />
             <Route path="/login" element={ <Login /> } />
-            <Route path='/signup' element={ <Signup />} />
             <Route path="/create" element={ <Create /> } />
             <Route path="/edit/:id" element={ <Edit /> } />
             <Route path="/gallery" element={ <Gallery /> } />
