@@ -10,7 +10,7 @@ const replySchema = new Schema(
       type: String,
       required: true
     },
-    writtenBy: {
+    username: {
       type: String,
       required: true,
       trim: true
@@ -29,7 +29,7 @@ const replySchema = new Schema(
 
 const commentSchema = new Schema(
   {
-    writtenBy: {
+    username: {
       type: String,
       required: true
     },

@@ -5,18 +5,13 @@
   font-family: 'Lexend Deca', sans-serif;
 }
 
-.container {
-  position: inline-block;
-  display: flex;
-}
-
 body {
-  margin: 0;
-  padding: 0;
   background: lightblue;
   color: #b47555;
-  min-height: 100%;
   display: inline-block;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 li {
@@ -28,7 +23,7 @@ li {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   opacity: 0.65;
   object-fit: cover;
 }
@@ -245,6 +240,22 @@ a:hover {
   font-weight: 400;
 }
 
+/* User main style */
+.main-area {
+  width: 80%;
+  position: absolute;
+  top: 35%;
+  left: 10%;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /*Modal Style*/
 
 
@@ -297,7 +308,7 @@ button {
 .contact {
   width: 30%;
   position: absolute;
-  top: 15%;
+  top: 25%;
   left: 35%;
 }
 
@@ -310,8 +321,12 @@ fieldset {
   overflow: hidden;
 }
 
+form label {
+  font-size: 24px;
+}
+
 legend {
-  font-size: 1.25em;
+  font-size: 3em;
   padding: 0 .25em;
   color: #3d627b;
   width: auto;
@@ -359,8 +374,8 @@ textarea {
   border-radius: 6px;
   background-color: #294353;
   color: white;
-  font-size: .8em;
-  font-weight: 400;
+  font-size: 1.5em;
+  font-weight: 300;
 }
 
 input:focus {
@@ -373,30 +388,58 @@ input:focus {
   color: rgb(145, 3, 3);
 }
 
+/* About Page */
+.about-section {
+  width: 100vh;
+  height: 100%;
+  position: absolute;
+  top: 30%;
+  left: 28%;
+}
+
+.about-section h1 {
+  margin-bottom: 30px;
+  font-size: 2.5vw;
+  font-weight: 800;
+  color: #4a7896
+}
+
+.text {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 20px;
+  color: #4a7896
+}
+
+
 /* Footer Styling */
 .footer {
   width: 100%;
-  position: absolute;
+  position:absolute;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content:center;
+  flex-direction: column;
   z-index: 1000;
   bottom: 0;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .footer ul {
-  /* padding:0; */
   list-style: none;
   text-align: center;
-  font-size: 2vw;
   height: 40px;
 }
 
 .footer li {
   padding:0 10px;
-  line-height: 3vw;
+  line-height: 2vw;
   color: #294353;
   font-size:2vw;
 }

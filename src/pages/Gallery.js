@@ -3,6 +3,7 @@ import TshirtList from '../components/TshirtList';
 
 function Gallery(props) {
   const { currentCategory } = props;
+  
   return (
     <section>
       {/* <h1 data-testid="h1tag">{(currentCategory.name)}</h1>

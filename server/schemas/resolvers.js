@@ -1,4 +1,6 @@
+const { AuthenticationError } = require('apollo-server-express');
 const { User, TShirt, Comment } = require('../models');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   Query: {
@@ -16,30 +18,49 @@ const resolvers = {
   },
   Mutation: {
     login: async (parent, { email, password }) => {
+
       const user = await User.findOne({ email });
+      if (!user) throw new AuthenticationError('Incorrect credentials');
 
-      // need to add all the auth processes
+      const correctPw = await user.isCorrectPassword(password);
+      if (!correctPw) throw new AuthenticationError('Incorrect credentials');
 
-      return user;
+      const token = signToken(user);
+      console.log('User: ' + user._id + ' has signed in');
+      return { token, user };
     },
-    //sign up
+
     addUser: async (parent, args) => {
-      return await User.create(args);
+      const user = await User.create(args);
+      const token = signToken(user);
+
+      return { token, user };
     },
-    addTShirt: async (parent, args) => {
-      return await TShirt.create(args);
+
+    addTShirt: async (parent, args, context) => {
+      if (context.user) {
+        return await TShirt.create(args);
+      }
+
+      throw new AuthenticationError('Not logged in');
     },
-    addComment: async (parent, args) => {
-      const comment = await Comment.create(args);
-      return await TShirt.findOneAndUpdate(
-        { _id: args.TShirt },
-        { $push: { comments: comment } },
-        { new: true, runValidators: true }
-      )
-        .populate('comments')
+
+    addComment: async (parent, args, context) => {
+      if (context.user) {
+        const comment = await Comment.create(args);
+        return await TShirt.findOneAndUpdate(
+          { _id: args.TShirt },
+          { $push: { comments: comment } },
+          { new: true, runValidators: true }
+        )
+          .populate('comments')
+      }
     },
-    deleteTShirt: async (parent, { _id }) => {
-      return await TShirt.deleteOne({ _id })
+
+    deleteTShirt: async (parent, { _id }, context) => {
+      if (context.user) {
+        return await TShirt.deleteOne({ _id });
+      }
     }
   }
 }
