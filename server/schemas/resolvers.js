@@ -26,6 +26,7 @@ const resolvers = {
       if (!correctPw) throw new AuthenticationError('Incorrect credentials');
 
       const token = signToken(user);
+      console.log('User: ' + user._id + ' has signed in');
       return { token, user };
     },
 
