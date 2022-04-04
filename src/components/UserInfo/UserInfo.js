@@ -7,11 +7,11 @@ const UserInfo = (props) => {
         <div>
             <div className="card">
                 {/* <img src={img} alt="" /> */}
-                <h2>{name}</h2>
-                <h4>Username: {username}</h4>
-                <h4>Email: {email}</h4>
-                <h4>Phone: {phone}</h4>
-                <button onClick={()=> props.handleAddBtn(props.user)}>Add</button>
+                <h4>{name}</h4>
+                <span>Username: {username}</span>
+                <span>Email: {email}</span>
+                <span>Phone: {phone}</span>
+                <button className='loginSubmit' onClick={()=> props.handleAddBtn(props.user)}>Add</button>
             </div>
         </div>
     );
