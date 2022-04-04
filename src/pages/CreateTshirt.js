@@ -9,7 +9,7 @@ function CreateTshirt() {
     title: '',
     brand: '',
     description: '',
-
+    imageLink: '',
   });
 
   const handleChange = (event) => {
@@ -22,6 +22,7 @@ function CreateTshirt() {
   };
 
   const handleFormSubmit = async (event) => {
+    console.log(formState);
     event.preventDefault();
     try {
       const { data } = await addTshirt({
@@ -50,7 +51,8 @@ function CreateTshirt() {
           type='test'
           name='brand'
           defaultValue={formState.brand}
-          onBlur={handleChange}></input>
+          onBlur={handleChange}>
+        </input>
 
         <label htmlFor='description'>Description</label>
         <textarea
@@ -59,6 +61,20 @@ function CreateTshirt() {
           defaultValue={formState.description}
           onBlur={handleChange}>
         </textarea>
+
+        <label htmlFor='image-link'>Image Link</label>
+        <input
+          type='link'
+          name='imageLink'
+          defaultValue={formState.imageLink}
+          onBlur={handleChange}>
+        </input>
+
+        <div>
+          {formState.imageLink ? (
+            <img src={formState.imageLink} alt='tshirt' />
+          ) : (null)}
+        </div>
 
         <button type='submit'>Create</button>
       </form>

@@ -21,7 +21,7 @@ const typeDefs = gql`
     description: String
     username: String
     createdAt: String
-    images: [Image]
+    imageLink: String
     comments: [Comment]
   }
 

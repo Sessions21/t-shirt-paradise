@@ -33,9 +33,7 @@ export const ADD_TSHIRT = gql`
       description
       username
       createdAt
-      images {
-        imageLink
-      }
+      imageLink
     }
   }
 `;

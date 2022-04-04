@@ -26,9 +26,9 @@ const tShirtSchema = new Schema(
       default: Date.now,
       // get: (createdAtVal) => dateFormat(createdAtVal),
     },
-    images: {
-      type: Array,
-      default: []
+    imageLink: {
+      type: String,
+      trim: true
     },
     // reference to comment model
     comments: [
