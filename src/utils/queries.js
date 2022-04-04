@@ -2,22 +2,24 @@ import { gql } from '@apollo/client';
 
 export const QUERY_ALLTSHIRTS = gql`
     {
-        tshirts 
-        {
+        tshirts {
             _id
             title
             brand
             description
-            createdBy
+            username
             createdAt
             images {
-                imageLink
+            imageLink
+            }
+            comments {
+            _id
             }
         }
     }
 `;
 
-export const QUERY_tshirts = gql`
+export const QUERY_TSHIRTSBYUSER = gql`
     query tshirts($username: String) {
         tshirts(username: $username) {
             _id
@@ -35,7 +37,7 @@ export const QUERY_tshirts = gql`
     }
 `;
 
-export const QUERY_tshirt = gql`
+export const QUERY_TSHIRT = gql`
     query tshirt($id: ID!) {
         tshirt(_id: $id) {
             _id
@@ -59,16 +61,21 @@ export const QUERY_USER = gql`
             _id
             username
             email
-            friendCount
-            friends {
-                _id
-                username
-            }
             tshirts {
                 _id
-                tshirtText
+                title
+                brand
+                description
+                username
                 createdAt
-                reactionCount
+                    images {
+                    imageLink
+                }
+                    comments {
+                    _id
+                    commentBody
+                    createdAt
+                }
             }
         }
     }
@@ -80,22 +87,21 @@ export const QUERY_ME = gql`
             _id
             username
             email
-            friendCount
             tshirts {
                 _id
-                tshirtText
-                createdAt
-                reactionCount 
-                reactions {
-                    _id
-                    createdAt
-                    reactionBody
-                    username
-                }
-            }
-            friends {
-                _id
+                title
+                brand
+                description
                 username
+                createdAt
+                images {
+                    imageLink
+                }
+                comments {
+                    _id
+                    commentBody
+                    createdAt
+                }
             }
         }
     }
