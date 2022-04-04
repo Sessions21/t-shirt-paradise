@@ -18,6 +18,10 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minlength: 6
+  },
+  tshirts: {
+    type: Schema.Types.ObjectId,
+    ref: 'TShirt'
   }
 });
 

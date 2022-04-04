@@ -16,7 +16,7 @@ const tShirtSchema = new Schema(
       type: String,
       trim: true
     },
-    createdBy: {
+    username: {
       type: String,
       required: true,
       trim: true
