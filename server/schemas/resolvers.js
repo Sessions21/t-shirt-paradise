@@ -38,8 +38,10 @@ const resolvers = {
     },
 
     addTShirt: async (parent, args, context) => {
+      console.log("addTshirt");
+      console.log(context.user);
       if (context.user) {
-        return await TShirt.create(args);
+        return await TShirt.create({ ...args, username: context.user.username });
       }
 
       throw new AuthenticationError('Not logged in');
