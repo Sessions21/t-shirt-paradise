@@ -25,16 +25,15 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_TSHIRT = gql`
-  mutation addTshirt($tshirtText: String!) {
-    addTshirt(tshirtText: $tshirtText) {
+  mutation addTShirt ($title: String!, $brand: String, $description: String, $imageLink: String) {
+    addTShirt(title: $title, brand: $brand, description: $description, imageLink: $imageLink) {
       _id
-      tshirtText
-      createdAt
+      title
+      brand
+      description
       username
-      reactionCount
-      reactions {
-        _id
-      }
+      createdAt
+      imageLink
     }
   }
 `;

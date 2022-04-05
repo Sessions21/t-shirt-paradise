@@ -9,9 +9,7 @@ export const QUERY_ALLTSHIRTS = gql`
             description
             username
             createdAt
-            images {
             imageLink
-            }
             comments {
             _id
             }
@@ -68,10 +66,8 @@ export const QUERY_USER = gql`
                 description
                 username
                 createdAt
-                    images {
-                    imageLink
-                }
-                    comments {
+                imageLink
+                comments {
                     _id
                     commentBody
                     createdAt
@@ -94,9 +90,7 @@ export const QUERY_ME = gql`
                 description
                 username
                 createdAt
-                images {
-                    imageLink
-                }
+                imageLink
                 comments {
                     _id
                     commentBody
