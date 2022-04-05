@@ -5,7 +5,8 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
   Query: {
     user: async (parent, args) => {
-      return await User.findOne({ username: args.username });
+      return await User.findOne({ username: args.username })
+        .populate('tshirts');
     },
     tshirt: async (parent, { _id }) => {
       return await TShirt.findOne({ _id })
@@ -39,7 +40,12 @@ const resolvers = {
 
     addTShirt: async (parent, args, context) => {
       if (context.user) {
-        return await TShirt.create({ ...args, username: context.user.username });
+        const tshirt = await TShirt.create({ ...args, username: context.user.username });
+        User.findOneAndUpdate(
+          { username: tshirt.username },
+          { $push: { tshirts: tshirt } }
+        )
+        return tshirt
       }
 
       throw new AuthenticationError('Not logged in');
