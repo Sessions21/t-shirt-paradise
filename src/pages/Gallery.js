@@ -1,8 +1,7 @@
 import React from "react";
-import fakeData from '../fakeData';
 import { useState } from 'react';
 import TshirtList from "../components/TshirtList";
-import { QUERY_ALLTSHIRTS } from "../utils/queries";
+
 
 const Gallery = () => {
 
