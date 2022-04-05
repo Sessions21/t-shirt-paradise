@@ -39,7 +39,12 @@ const resolvers = {
 
     addTShirt: async (parent, args, context) => {
       if (context.user) {
-        return await TShirt.create(args);
+        const tshirt = await TShirt.create(args);
+        User.findOneAndUpdate(
+          { username: context.user.username },
+          { $push: { thsirts: tshirt } },
+        )
+        return tshirt;
       }
 
       throw new AuthenticationError('Not logged in');

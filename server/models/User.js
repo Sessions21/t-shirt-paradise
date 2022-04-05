@@ -19,10 +19,12 @@ const userSchema = new Schema({
     required: true,
     minlength: 6
   },
-  tshirts: {
-    type: Schema.Types.ObjectId,
-    ref: 'TShirt'
-  }
+  tshirts: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'TShirt'
+    }
+  ]
 });
 
 userSchema.pre('save', async function (next) {
