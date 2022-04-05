@@ -1,16 +1,19 @@
-import React from 'react';
-import TshirtList from '../components/TshirtList';
+import React from "react";
+import fakeData from '../fakeData';
+import { useState } from 'react';
+import TshirtList from "../components/TshirtList";
+import { QUERY_ALLTSHIRTS } from "../utils/queries";
 
-function Gallery(props) {
-  const { currentCategory } = props;
-  
+const Gallery = () => {
+
+  // const trialUsers = fakeData;
+  const [Tshirt, setTshirt] = useState([]);
   return (
-    <section>
-      {/* <h1 data-testid="h1tag">{(currentCategory.name)}</h1>
-      <p>{currentCategory.description}</p>
-      <TshirtList category={currentCategory.name} /> */}
+    <div className="Gallery container">
+      <h1 className="gallery title"> T-Shirt Paradise User Submitted Gallery </h1>
+
       <TshirtList />
-    </section>
+    </div>
   );
-}
+};
 export default Gallery;
