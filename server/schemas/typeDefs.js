@@ -4,7 +4,7 @@ const typeDefs = gql`
 
   type Comment {
     _id: ID
-    writtenBy: String
+    username: String
     commentBody: String
     createdAt: String
   }
@@ -19,9 +19,9 @@ const typeDefs = gql`
     title: String
     brand: String
     description: String
-    createdBy: String
+    username: String
     createdAt: String
-    images: [Image]
+    imageLink: String
     comments: [Comment]
   }
 
@@ -30,6 +30,12 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
+    tshirts: [TShirt]
+  }
+
+  type Auth {
+    token: ID
+    user: User
   }
 
   type Query {
@@ -39,10 +45,10 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    login(email: String!, password: String!): User
-    addUser(username: String!, email: String!, password: String!): User
-    addTShirt(title: String!, brand: String, description: String, createdBy: String, createdAt: String, imageLink: String!): TShirt
-    addComment(TShirt: ID!, writtenBy: String!, commentBody: String, createdAt: String): TShirt
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
+    addTShirt(title: String!, brand: String, description: String, imageLink: String): TShirt
+    addComment(TShirt: ID!, username: String!, commentBody: String): TShirt
     deleteTShirt(_id: ID!): TShirt
   }
 `;

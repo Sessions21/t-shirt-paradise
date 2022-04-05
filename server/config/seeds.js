@@ -28,11 +28,11 @@ db.once('open', async () => {
 
   const comments = await Comment.insertMany([
     {
-      writtenBy: 'testuser2',
+      username: 'testuser2',
       commentBody: 'Very Cool',
     },
     {
-      writtenBy: 'testuser3',
+      username: 'testuser3',
       commentBody: 'Something that someone might say',
     }
   ])
@@ -46,10 +46,8 @@ db.once('open', async () => {
       title: 'Test Image',
       brand: 'brand here',
       description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      createdBy: 'testuser',
-      images: [
-        { imageLink: 'https://i.imgur.com/ePbKRvC.jpg' },
-      ],
+      username: 'testuser',
+      imageLink: 'https://i.imgur.com/ePbKRvC.jpg',
       comments: [
         comments[0],
         comments[1]
