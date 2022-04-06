@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_ALLTSHIRTS = gql`
-    {
+   query tshirts {
         tshirts {
             _id
             title
@@ -11,25 +11,25 @@ export const QUERY_ALLTSHIRTS = gql`
             createdAt
             imageLink
             comments {
-            _id
+                _id
+                commentBody
             }
         }
     }
 `;
 
 export const QUERY_TSHIRTSBYUSER = gql`
-    query tshirts($username: String) {
-        tshirts(username: $username) {
+    query userTShirts($username: String) {
+        userTShirts(username: $username) {
             _id
-            tshirtText
+            title
+            brand
+            description
             createdAt
-            username
-            reactionCount
-            reactions {
+            imageLink
+            comments {
                 _id
-                createdAt
-                username
-                reactionBody
+                commentBody
             }
         }
     }
@@ -39,16 +39,10 @@ export const QUERY_TSHIRT = gql`
     query tshirt($id: ID!) {
         tshirt(_id: $id) {
             _id
-            tshirtText
-            createdAt
-            username
-            reactionCount
-            reactions {
-                _id
-                createdAt
-                username
-                reactionBody
-            }
+            title
+            brand
+            description
+            imageLink
         }
     }
 `;
