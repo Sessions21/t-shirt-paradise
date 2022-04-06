@@ -112,7 +112,7 @@ db.once('open', async () => {
 
   await User.deleteMany();
 
-  await User.insertMany([
+  await User.create([
     {
       username: 'testuser',
       email: 'test@test.com',
