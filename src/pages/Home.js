@@ -4,7 +4,7 @@ import coverImage from "../assets/images/cover-2.png"
 function Home() {
 
   return (
-    <div>
+    <div className='home'>
       <img className="background" src={coverImage} alt="paradise scene"></img>
       <div className='start'>
         <h2 className='intro'>The place to share your <span className='love'>LOVE</span> of the T-Shirt!</h2>

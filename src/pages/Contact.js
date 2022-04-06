@@ -37,7 +37,7 @@ const Contact = () => {
 
 
   return (
-    <div>
+    <div className='contact-section'>
       <img className="background" src={contactImage} alt="paradise scene"></img>
       <section className='contact'>
         <form id="contact-form" onSubmit={handleSubmit}>
