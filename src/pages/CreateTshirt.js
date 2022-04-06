@@ -48,7 +48,7 @@ function CreateTshirt() {
 
         <label htmlFor='brand'>Brand</label>
         <input
-          type='test'
+          type='text'
           name='brand'
           defaultValue={formState.brand}
           onBlur={handleChange}>

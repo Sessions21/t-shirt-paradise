@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 body {
@@ -18,7 +18,7 @@ li {
   list-style: none;
 }
 
-.background{
+.background {
   position: absolute;
   top: 0;
   left: 0;
@@ -48,8 +48,8 @@ header {
 /* header page titl */
 .name {
   color: #4a7896;
-  font-size:3.5vw;
-  font-weight:300;
+  font-size: 3.5vw;
+  font-weight: 300;
 }
 
 .name:hover {
@@ -58,13 +58,13 @@ header {
 
 .t {
   color: white;
-  font-size:3.5vw;
+  font-size: 3.5vw;
   font-weight: 500;
 }
 
 .shirt {
   color: white;
-  font-size:3.5vw;
+  font-size: 3.5vw;
   font-weight: 500;
 }
 
@@ -78,7 +78,7 @@ header {
 
 .dash {
   color: #9c6244;
-  font-size:3vw;
+  font-size: 3vw;
   font-weight: bold;
 }
 
@@ -103,7 +103,7 @@ a:hover {
 
 .nav a {
   color: #3d627b;
-  font-size: 1.30vw;
+  font-size: 1.3vw;
   font-weight: 300;
   margin-left: 20px;
 }
@@ -129,7 +129,7 @@ a:hover {
 
 .start h2 {
   font-size: 2.75vw;
-  font-weight: bold
+  font-weight: bold;
 }
 
 .love {
@@ -141,7 +141,7 @@ a:hover {
 
 .startButton {
   background: rgb(102, 102, 102);
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .5);
+  box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.5);
   border: 0;
   border-radius: 5px;
   color: #fff;
@@ -149,13 +149,12 @@ a:hover {
   font-size: 1.75vw;
   font-weight: 400;
   padding: 10px 15px;
-  opacity: .80;
+  opacity: 0.8;
 }
 
 .startButton:hover {
   opacity: 1;
 }
-
 
 .navActive {
   color: lightblue;
@@ -188,17 +187,17 @@ a:hover {
 }
 
 .fieldSetLogin p {
-  color:white;
+  color: white;
   font-weight: 400;
   overflow: hidden;
 }
 
 .loginSubmit {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   border-radius: 6px;
   background-color: #294353;
   color: white;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 400;
 }
 
@@ -226,17 +225,17 @@ a:hover {
 }
 
 .fieldSetSignup p {
-  color:white;
+  color: white;
   font-weight: 400;
   overflow: hidden;
 }
 
 .signupSubmit {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   border-radius: 6px;
   background-color: #294353;
   color: white;
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 400;
 }
 
@@ -257,7 +256,6 @@ a:hover {
 }
 
 /*Modal Style*/
-
 
 .img-thumbnail {
   width: auto;
@@ -327,7 +325,7 @@ form label {
 
 legend {
   font-size: 3em;
-  padding: 0 .25em;
+  padding: 0 0.25em;
   color: #3d627b;
   width: auto;
 }
@@ -337,7 +335,6 @@ legend {
 }
 
 /* Contact Labels */
-
 
 label {
   display: block;
@@ -354,23 +351,24 @@ label:first-of-type {
 }
 
 input {
-  padding: .5em;
+  padding: 0.5em;
   border: solid 1px #3d627b;
 }
 
-input[type="email"], input[type="text"] {
+input[type="email"],
+input[type="text"] {
   width: 15em;
 }
 
 textarea {
   min-height: 8em;
   min-width: 100%;
-  padding: .5em;
+  padding: 0.5em;
   border: solid 1px #3d627b;
 }
 
 .contactSubmit {
-  padding: .5em 1em;
+  padding: 0.5em 1em;
   border-radius: 6px;
   background-color: #294353;
   color: white;
@@ -381,7 +379,7 @@ textarea {
 input:focus {
   border: 1px solid v #9c6244;
   box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
-} 
+}
 
 .error-text {
   font-weight: 600;
@@ -401,7 +399,7 @@ input:focus {
   margin-bottom: 30px;
   font-size: 2.5vw;
   font-weight: 800;
-  color: #4a7896
+  color: #4a7896;
 }
 
 .text {
@@ -416,9 +414,8 @@ input:focus {
   justify-content: space-between;
   font-weight: 700;
   font-size: 20px;
-  color: #4a7896
+  color: #4a7896;
 }
-
 
 /* Footer Styling */
 .footer {
@@ -438,79 +435,78 @@ input:focus {
 }
 
 .footer li {
-  padding:0 10px;
+  padding: 0 10px;
   line-height: 2vw;
   color: #294353;
-  font-size:2vw;
+  font-size: 2vw;
 }
 
 .footer ul a {
-  color:inherit;
-  text-decoration:none;
-  opacity:0.8;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
   font-size: 2vw;
   line-height: 2vw;
 }
 
 .footer p {
   color: #9c6244;
-  text-decoration:none;
-  opacity:0.8;
+  text-decoration: none;
+  opacity: 0.8;
   font-size: 2vw;
   margin: 0;
 }
 
 .footer ul a:hover {
-  opacity:1;
+  opacity: 1;
   color: white;
 }
 
-
 .footer .social {
-  text-align:center;
+  text-align: center;
 }
 
 .footer .social > a {
-  font-size:2.5vw;
-  width:3.5vw;
-  height:3.5vw;
-  display:inline-block;
-  text-align:center;
+  font-size: 2.5vw;
+  width: 3.5vw;
+  height: 3.5vw;
+  display: inline-block;
+  text-align: center;
   align-items: center;
-  border-radius:50%;
-  border:2px solid #294353;
-  margin:0 25px;
-  color:#9c6244;
-  opacity:0.75;
+  border-radius: 50%;
+  border: 2px solid #294353;
+  margin: 0 25px;
+  color: #9c6244;
+  opacity: 0.75;
 }
 
 .footer .social > a:hover {
-  opacity:0.9;
+  opacity: 0.9;
   color: white;
 }
 
-@media(max-width: 1256px) {
+@media (max-width: 1256px) {
   .background {
     object-fit: cover;
   }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .name {
-    font-size:40px;
-    font-weight:400;
+    font-size: 40px;
+    font-weight: 400;
   }
-  
+
   .t {
-    font-size:40px;
+    font-size: 40px;
   }
-  
+
   .shirt {
     font-size: 40px;
   }
-  
+
   .dash {
-    font-size:40px;
+    font-size: 40px;
   }
 
   .titleDesc {
@@ -532,11 +528,11 @@ input:focus {
   }
 }
 
-@media(max-width: 930px) {
+@media (max-width: 930px) {
   .footer .social > a {
-    font-size:35px;
-    width:50px;
-    height:50px;
+    font-size: 35px;
+    width: 50px;
+    height: 50px;
   }
   .footer ul a {
     font-size: 20px;

@@ -5,10 +5,16 @@ const { signToken } = require("../utils/auth");
 const resolvers = {
   Query: {
     user: async (parent, args) => {
-      return await User.findOne({ username: args.username });
+      return await User.findOne({ username: args.username })
+        .populate('tshirts');
     },
     tshirt: async (parent, { _id }) => {
       return await TShirt.findOne({ _id }).populate("comments");
+    },
+    userTShirts: async (parent, args, context) => {
+      const username = context.user?.username || args.username;
+      return await TShirt.find({ username })
+        .populate('comments');
     },
     tshirts: async () => {
       console.log("Called get all tshirts");
@@ -60,11 +66,23 @@ const resolvers = {
       if (context.user) {
         const comment = await Comment.create(args);
         return await TShirt.findOneAndUpdate(
-          { _id: args.TShirt },
+          { _id: args._id },
           { $push: { comments: comment } },
           { new: true, runValidators: true }
         ).populate("comments");
       }
+    },
+
+    editTShirt: async (parent, args, context) => {
+      if (context.user) {
+        return await TShirt.findOneAndUpdate(
+          { _id: args._id },
+          args,
+          { new: true, runValidators: true }
+        )
+          .populate('comments')
+      }
+
     },
 
     deleteTShirt: async (parent, { _id }, context) => {
