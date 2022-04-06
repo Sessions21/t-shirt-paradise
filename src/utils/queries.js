@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client';
 
 export const QUERY_ALLTSHIRTS = gql`
-    {
+   query tshirts {
         tshirts {
             _id
             title

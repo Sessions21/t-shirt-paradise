@@ -1,6 +1,6 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User, TShirt, Comment } = require('../models');
-const { signToken } = require('../utils/auth');
+const { AuthenticationError } = require("apollo-server-express");
+const { User, TShirt, Comment } = require("../models");
+const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
@@ -9,8 +9,7 @@ const resolvers = {
         .populate('tshirts');
     },
     tshirt: async (parent, { _id }) => {
-      return await TShirt.findOne({ _id })
-        .populate('comments');
+      return await TShirt.findOne({ _id }).populate("comments");
     },
     userTShirts: async (parent, args, context) => {
       const username = context.user?.username || args.username;
@@ -18,21 +17,20 @@ const resolvers = {
         .populate('comments');
     },
     tshirts: async () => {
-      return await TShirt.find()
-        .populate('comments');
-    }
+      console.log("Called get all tshirts");
+      return await TShirt.find();
+    },
   },
   Mutation: {
     login: async (parent, { email, password }) => {
-
       const user = await User.findOne({ email });
-      if (!user) throw new AuthenticationError('Incorrect credentials');
+      if (!user) throw new AuthenticationError("Incorrect credentials");
 
       const correctPw = await user.isCorrectPassword(password);
-      if (!correctPw) throw new AuthenticationError('Incorrect credentials');
+      if (!correctPw) throw new AuthenticationError("Incorrect credentials");
 
       const token = signToken(user);
-      console.log('User: ' + user._id + ' has signed in');
+      console.log("User: " + user._id + " has signed in");
       return { token, user };
     },
 
@@ -45,15 +43,13 @@ const resolvers = {
 
     addTShirt: async (parent, args, context) => {
       if (context.user) {
-        const tshirt = await TShirt.create({ ...args, username: context.user.username });
-        User.findOneAndUpdate(
-          { username: tshirt.username },
-          { $push: { tshirts: tshirt } }
-        )
-        return tshirt
+        return await TShirt.create({
+          ...args,
+          username: context.user.username,
+        });
       }
 
-      throw new AuthenticationError('Not logged in');
+      throw new AuthenticationError("Not logged in");
     },
 
     addComment: async (parent, args, context) => {
@@ -63,8 +59,7 @@ const resolvers = {
           { _id: args._id },
           { $push: { comments: comment } },
           { new: true, runValidators: true }
-        )
-          .populate('comments')
+        ).populate("comments");
       }
     },
 
@@ -84,8 +79,8 @@ const resolvers = {
       if (context.user) {
         return await TShirt.deleteOne({ _id });
       }
-    }
-  }
-}
+    },
+  },
+};
 
 module.exports = resolvers;
