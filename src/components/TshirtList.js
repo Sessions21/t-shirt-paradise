@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
-import Modal from './Modal';
+import React, { useState } from "react";
+import Modal from "./Modal";
 // For api calls
-import { useQuery } from '@apollo/react-hooks';
-import { QUERY_ALLTSHIRTS } from '../utils/queries';
+import { useQuery } from "@apollo/react-hooks";
+import { QUERY_ALLTSHIRTS } from "../utils/queries";
 
 const TshirtList = ({ category }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentTshirt, setCurrentTshirt] = useState();
 
-  const [Tshirts] = useState([
-
-  ]);
+  const [Tshirts] = useState([]);
 
   // Fetch Data From Databasae
   const { loading, error, data } = useQuery(QUERY_ALLTSHIRTS);
@@ -19,19 +17,21 @@ const TshirtList = ({ category }) => {
     console.log(error);
   }
 
-  console.log({ loading: loading, data: data });
+  console.log({ loading: loading, data: data, error:error});
 
-  const tshirtData = data?.tshirts || {};
+  const tshirtData = data?.tshirts || [];
 
   if (loading) {
-    return <div>Loading...</div>
+    return <div>Loading...</div>;
   }
-  // End fetch 
+  // End fetch
 
-  const currentTshirts = Tshirts.filter(tshirt => tshirt.category === category);
+  const currentTshirts = Tshirts.filter(
+    (tshirt) => tshirt.category === category
+  );
 
-  const toggleModal = (image, i) => {
-    setCurrentTshirt({ ...image, index: i });
+  const toggleModal = () => {
+    setCurrentTshirt({});
     setIsModalOpen(!isModalOpen);
   };
 
@@ -40,17 +40,28 @@ const TshirtList = ({ category }) => {
       {isModalOpen && (
         <Modal onClose={toggleModal} currentTshirt={currentTshirt} />
       )}
-      {/* <div className="flex-row">
-        {currentTshirts.map((image, i) => (
-          <img
-            src={require(`../assets/images/${category}/${i}.jpg`).default}
-            alt={image.name}
-            className="img-thumbnail"
-            onClick={() => toggleModal(image, i)}
-            key={image.name}
-          />
-        ))}
-      </div> */}
+      <div className="flex-row">
+        {tshirtData.map(
+          ({ title, username, imageLink, description, comments }) => (
+            <div>
+              <h2>
+                {title} By {username}
+              </h2>
+              <span>{imageLink}</span>
+              <span>{description}</span>
+              <span>{comments}</span>
+              <button
+                className="addComment"
+                onClick={() => {
+                  toggleModal();
+                }}
+              >
+                Comment
+              </button>
+            </div>
+          )
+        )}
+      </div>
     </div>
   );
 };
