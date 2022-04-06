@@ -18,16 +18,6 @@ const resolvers = {
     },
     tshirts: async () => {
       console.log("Called get all tshirts");
-      return [
-        {
-          title: "wolf shirt",
-          brand: "wolves",
-          description: "Wolf howling at moon",
-          username: "",
-          createdAt: "",
-          imageLink: "",
-        },
-      ];
       return await TShirt.find();
     },
   },
