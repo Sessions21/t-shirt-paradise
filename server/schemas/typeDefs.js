@@ -41,6 +41,7 @@ const typeDefs = gql`
   type Query {
     user(username: String!): User
     tshirt(_id: ID!): TShirt
+    userTShirts(username: String): [TShirt]
     tshirts: [TShirt]
   }
 
@@ -49,6 +50,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     addTShirt(title: String!, brand: String, description: String, imageLink: String): TShirt
     addComment(TShirt: ID!, username: String!, commentBody: String): TShirt
+    editTShirt(_id: ID!, title: String, description: String, brand: String, imageLink: String): TShirt
     deleteTShirt(_id: ID!): TShirt
   }
 `;

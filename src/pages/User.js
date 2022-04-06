@@ -1,40 +1,34 @@
 import React from 'react';
-import fakeData from '../fakeData';
-import { useState } from 'react';
-import UserInfo from '../components/UserInfo/UserInfo';
-import TshirtList from '../components/TshirtList';
 import contactImage from "../assets/images/cover-4.png";
 import { useQuery } from '@apollo/client';
-import { Query_ME } from '../utils/queries';
-import { Query_USER } from '../utils/queries';
+import { QUERY_TSHIRTSBYUSER } from '../utils/queries';
 
 const User = () => {
-    // console.log(fakeData);
-    const trialUsers = fakeData;
-    const [users, setUsers] = useState(trialUsers);
-    const [Tshirt, setTshirt] = useState([]);
 
-    const handleAddBtn = (user) => {
-        const newTshirt = [...TshirtList, user];
-        setTshirt(newTshirt)
+    const { loading, data } = useQuery(QUERY_TSHIRTSBYUSER);
+    const userTShirts = data?.userTShirts || {}
+
+    if (loading) {
+        return <div>Loading...</div>
     }
+
     return (
         <div>
             <img className="background" src={contactImage} alt="paradise scene"></img>
-            <div className="main-area">
-                <div className="user-container">
-                    {
-                        users.map(us => <UserInfo
-                            user={us}
-                            handleAddBtn={handleAddBtn}>
-                        </UserInfo>)
-                    }
-                </div>
-                <div className="total-container">
-                    <TshirtList Tshirt={Tshirt}></TshirtList>
-                </div>
+            <div className="main-area" >
+                {userTShirts.map(({ _id, title, brand, description, imageLink }, i) => {
+                    return (
+                        <div key={i}>
+                            <h3>{title}</h3>
+                            <p>{brand}</p>
+                            <p>{description}</p>
+                            <img src={imageLink} />
+                            <button onClick={() => window.location.replace(`/edit/${_id}`)}>Edit</button>
+                        </div>
+                    )
+                })}
             </div>
-        </div>
+        </div >
     );
 };
 

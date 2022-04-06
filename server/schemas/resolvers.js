@@ -11,9 +11,14 @@ const resolvers = {
       return await TShirt.findOne({ _id })
         .populate('comments');
     },
+    userTShirts: async (parent, args, context) => {
+      const username = context.user?.username || args.username;
+      return await TShirt.find({ username })
+        .populate('comments');
+    },
     tshirts: async () => {
-      console.log('Called get all tshirts');
       return await TShirt.find()
+        .populate('comments');
     }
   },
   Mutation: {
@@ -49,12 +54,24 @@ const resolvers = {
       if (context.user) {
         const comment = await Comment.create(args);
         return await TShirt.findOneAndUpdate(
-          { _id: args.TShirt },
+          { _id: args._id },
           { $push: { comments: comment } },
           { new: true, runValidators: true }
         )
           .populate('comments')
       }
+    },
+
+    editTShirt: async (parent, args, context) => {
+      if (context.user) {
+        return await TShirt.findOneAndUpdate(
+          { _id: args._id },
+          args,
+          { new: true, runValidators: true }
+        )
+          .populate('comments')
+      }
+
     },
 
     deleteTShirt: async (parent, { _id }, context) => {
