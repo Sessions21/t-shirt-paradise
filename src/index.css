@@ -254,16 +254,17 @@ a:hover {
 
 .shirt-title h2 span {
   color:#9c6244;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 .shirt-user {
   color: white;
   font-weight: 300;
+  font-size: 25px;
 }
 
 .shirt-description {
-  color:#9c6244;
+  color:#3d627b;
   font-weight: 300;
   font-size: 1.25em;
 }
