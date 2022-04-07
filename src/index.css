@@ -36,7 +36,7 @@ li {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -229,6 +229,43 @@ a:hover {
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+}
+
+.gallery-title {
+  color: #3d627b;
+  font-size: 3.5vw;
+  font-weight: 200;
+  margin-bottom: 45px;
+  border-bottom: 6px solid #9c6244;
+}
+
+.gallery-title span {
+  color: white;
+  font-size: 3.5vw;
+  font-weight: 500;
+  margin-bottom: 45px;
+}
+
+.shirt-title h2 {
+  color:#3d627b;
+  font-weight: bold;
+}
+
+
+.shirt-title h2 span {
+  color:#9c6244;
+  font-weight: 200;
+}
+
+.shirt-user {
+  color: white;
+  font-weight: 300;
+}
+
+.shirt-description {
+  color:#9c6244;
+  font-weight: 300;
+  font-size: 1.25em;
 }
 
 /* User main style */
