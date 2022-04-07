@@ -40,6 +40,7 @@ function EditTshirt() {
         variables: { ...formState, _id: tshirtID }
       });
       console.log(data);
+      window.location.replace('/user');
     } catch (error) {
       console.error(error);
     }

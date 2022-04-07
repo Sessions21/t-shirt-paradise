@@ -15,9 +15,8 @@ const TshirtList = ({ category }) => {
     console.log(error);
   }
 
-  console.log({ loading: loading, data: data, error: error });
-
   const tshirtData = data?.tshirts || [];
+  console.log(tshirtData);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -44,7 +43,7 @@ const TshirtList = ({ category }) => {
                   {title} By {username}
                 </h2>
                 <p>{description}</p>
-                <img src={imageLink} alt='tshirt' />
+                <img className="tshirt-image" src={imageLink} alt='tshirt' />
                 <p>{comments.commentBody}</p>
                 <button
                   className="addComment"
