@@ -19,7 +19,7 @@ li {
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -222,6 +222,14 @@ a:hover {
   font-size: 0.8em;
   font-weight: 400;
 }
+/* gallery styles */
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
 
 /* User main style */
 .main-area {
@@ -237,6 +245,8 @@ a:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 10vh;
 }
 
 /* create style */
@@ -249,7 +259,7 @@ a:hover {
 
 .createContainer {
   width: 80vw;
-  height:29px;
+  height: 29px;
   position: absolute;
   top: 15%;
   left: 10%;
@@ -261,6 +271,7 @@ a:hover {
 
 .fieldSetCreate {
   margin: 1em 0;
+  margin-bottom: 10vh;
   padding: 1em 2em;
   border: 3px solid #9c6244;
   border-radius: 6px;
@@ -321,8 +332,14 @@ button {
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
+  margin-top: 1em;
   margin-bottom: 30px;
   padding: 10px 15px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* contact styling */
@@ -350,7 +367,7 @@ form label {
 
 legend {
   font-size: 2.5em;
-  padding: 0 .25em;
+  padding: 0 0.25em;
   color: #3d627b;
   width: auto;
 }
@@ -366,11 +383,6 @@ label {
   margin-top: 1em;
 }
 
-button {
-  display: block;
-  margin-top: 1em;
-}
-
 label:first-of-type {
   margin-top: 0;
 }
@@ -380,14 +392,15 @@ input {
   border: solid 1px #3d627b;
 }
 
-input[type="email"], input[type="text"] {
+input[type="email"],
+input[type="text"] {
   width: 20em;
 }
 
 textarea {
   height: 10vh;
   width: 80%;
-  padding: .5em;
+  padding: 0.5em;
   border: solid 1px #3d627b;
 }
 
@@ -443,7 +456,7 @@ input:focus {
 /* Footer Styling */
 .footer {
   width: 100%;
-  position:absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   z-index: 1000;
@@ -506,6 +519,9 @@ input:focus {
 .footer .social > a:hover {
   opacity: 0.9;
   color: white;
+}
+.space-for-footer {
+  height: 10vh;
 }
 
 @media (max-width: 1256px) {

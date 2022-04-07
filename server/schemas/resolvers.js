@@ -4,9 +4,13 @@ const { signToken } = require("../utils/auth");
 
 const resolvers = {
   Query: {
-    user: async (parent, args) => {
-      return await User.findOne({ username: args.username })
-        .populate('tshirts');
+    user: async (parent, args, context) => {
+      if (context.user) {
+        const username = context.user.username;
+        return await User.findOne({ username: username })
+          .populate('tshirts');
+      }
+      throw new AuthenticationError("Not logged in");
     },
     tshirt: async (parent, { _id }) => {
       return await TShirt.findOne({ _id }).populate("comments");
@@ -44,12 +48,18 @@ const resolvers = {
 
     addTShirt: async (parent, args, context) => {
       if (context.user) {
-        return await TShirt.create({
+        const tshirt = await TShirt.create({
           ...args,
           username: context.user.username,
         });
-      }
 
+        await User.findOneAndUpdate(
+          { username: context.user.username },
+          { $push: { tshirts: tshirt } }
+        )
+
+        return tshirt;
+      }
       throw new AuthenticationError("Not logged in");
     },
 
@@ -62,6 +72,7 @@ const resolvers = {
           { new: true, runValidators: true }
         ).populate("comments");
       }
+      throw new AuthenticationError("Not logged in");
     },
 
     editTShirt: async (parent, args, context) => {
@@ -73,13 +84,23 @@ const resolvers = {
         )
           .populate('comments')
       }
-
+      throw new AuthenticationError("Not logged in");
     },
 
     deleteTShirt: async (parent, { _id }, context) => {
       if (context.user) {
-        return await TShirt.deleteOne({ _id });
+        console.log(context.user);
+        const username = context.user.username;
+        console.log('delete');
+        await TShirt.deleteOne({ _id: _id });
+        return await User.findOneAndUpdate(
+          { username: username },
+          { $pull: { tshirts: _id } },
+          { new: true, runValidators: true }
+        )
+          .populate('tshirts');
       }
+      throw new AuthenticationError("Not logged in");
     },
   },
 };

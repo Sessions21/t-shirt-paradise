@@ -8,8 +8,6 @@ const TshirtList = ({ category }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentTshirt, setCurrentTshirt] = useState();
 
-  // const [Tshirts] = useState([]);
-
   // Fetch Data From Databasae
   const { loading, error, data } = useQuery(QUERY_ALLTSHIRTS);
 
@@ -25,10 +23,6 @@ const TshirtList = ({ category }) => {
     return <div>Loading...</div>;
   }
   // End fetch
-
-  // const currentTshirts = Tshirts.filter(
-  //   (tshirt) => tshirt.category === category
-  // );
 
   const toggleModal = () => {
     setCurrentTshirt({});
@@ -49,8 +43,8 @@ const TshirtList = ({ category }) => {
                 <h2>
                   {title} By {username}
                 </h2>
-                <img src={imageLink} alt='t-shirt thumbnail'/>
-                <span>{description}</span>
+                <p>{description}</p>
+                <img src={imageLink} alt='tshirt' />
                 <p>{comments.commentBody}</p>
                 <button
                   className="addComment"

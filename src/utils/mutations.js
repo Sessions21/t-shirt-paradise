@@ -52,6 +52,14 @@ export const EDIT_TSHIRT = gql`
   }
 `;
 
+export const DELETE_TSHIRT = gql`
+  mutation deleteTShirt ($_id: ID!) {
+    deleteTShirt (_id: $_id) {
+      _id
+    }
+  }
+`;
+
 export const ADD_REACTION = gql`
   mutation addReaction($tshirtId: ID!, $reactionBody: String!) {
     addReaction(tshirtId: $tshirtId, reactionBody: $reactionBody) {

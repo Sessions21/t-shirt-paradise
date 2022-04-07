@@ -48,8 +48,8 @@ export const QUERY_TSHIRT = gql`
 `;
 
 export const QUERY_USER = gql`
-    query user($username: String!) {
-        user(username: $username) {
+    query user{
+        user{
             _id
             username
             email
