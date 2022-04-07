@@ -49,7 +49,7 @@ const TshirtList = ({ category }) => {
                 <h2>
                   {title} By {username}
                 </h2>
-                <img src={imageLink} />
+                <img src={imageLink} alt='t-shirt thumbnail'/>
                 <span>{description}</span>
                 <p>{comments.commentBody}</p>
                 <button
