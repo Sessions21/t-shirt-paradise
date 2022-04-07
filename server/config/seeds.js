@@ -7,31 +7,31 @@ db.once('open', async () => {
 
   const comments = await Comment.insertMany([
     {
-      username: 'testuser2',
+      username: 'tshirtfiend',
       commentBody: 'Something that someone might say',
     },
     {
-      username: 'testuser3',
+      username: 'IlikeTee',
       commentBody: 'Something that someone might say',
     },
     {
-      username: 'testuser',
+      username: 'destinyFan',
       commentBody: 'Something that someone might say',
     },
     {
-      username: 'testuser',
+      username: 'destinyFan',
       commentBody: 'Something that someone might say',
     },
     {
-      username: 'testuser2',
+      username: 'tshirtfiend',
       commentBody: 'Something that someone might say',
     },
     {
-      username: 'testuser2',
+      username: 'tshirtfiend',
       commentBody: 'Something that someone might say',
     },
     {
-      username: 'testuser3',
+      username: 'IlikeTee',
       commentBody: 'Something that someone might say',
     },
   ])
@@ -42,65 +42,64 @@ db.once('open', async () => {
 
   const tshirts = await TShirt.insertMany([
     {
-      title: 'Test Image',
-      brand: 'brand here',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      username: 'testuser',
-      imageLink: 'https://i.imgur.com/ePbKRvC.jpg',
+      title: 'WHERE TWAB?',
+      brand: 'Bungie',
+      description: 'New shirt from Bungie',
+      username: 'destinyFan',
+      imageLink: 'https://bungiestore.com/media/catalog/product/w/h/wheres-twab_shirt-front.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=600&width=600&canvas=600:600',
       comments: [
         comments[0],
         comments[1]
       ]
     },
     {
-      title: 'Test Image 2',
-      brand: 'brand here',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      username: 'testuser',
-      imageLink: 'https://i.imgur.com/ePbKRvC.jpg',
+      title: 'Starhorse',
+      brand: 'Bungie',
+      description: 'Cool Starhorse t-shirt from Bungie',
+      username: 'destinyFan',
+      imageLink: 'https://bungiestore.com/media/catalog/product/m/e/mens-front-starhorse-mock-1000x1000.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=600&width=600&canvas=600:600',
     },
     {
-      title: 'Test Image 3',
+      title: 'Darth Vader Walks His ATAT',
       brand: 'brand here',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      username: 'testuser2',
-      imageLink: 'https://i.imgur.com/ePbKRvC.jpg',
+      description: 'This shirt is hilarious',
+      username: 'tshirtfiend',
+      imageLink: 'https://m.media-amazon.com/images/I/A1vJUKBjc2L._CLa%7C2140%2C2000%7C81A65MNTOcL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png',
       comments: [
         comments[2],
         comments[6]
       ]
     },
     {
-      title: 'Test Image 4',
-      brand: 'brand here',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      username: 'testuser',
-      imageLink: 'https://i.imgur.com/ePbKRvC.jpg',
+      title: 'Gjallarhorn Tshirt',
+      brand: 'Bungie',
+      description: 'One of my favorite tshirt designs',
+      username: 'destinyFan',
+      imageLink: 'https://bungiestore.com/media/catalog/product/g/j/gjallarhorn_shirt_front_1000x1000.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:',
     },
     {
-      title: 'Test Image 5',
-      brand: 'brand here',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      username: 'testuser3',
-      imageLink: 'https://i.imgur.com/ePbKRvC.jpg',
+      title: 'Processing...',
+      brand: 'Hanes',
+      description: 'Something for developers',
+      username: 'IlikeTees',
+      imageLink: 'https://m.media-amazon.com/images/I/71UQhfJQFkL._AC_UL320_.jpg',
       comments: [
         comments[3]
       ]
-
     },
     {
-      title: 'Test Image 6',
-      brand: 'brand here',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      username: 'testuser2',
-      imageLink: 'https://i.imgur.com/ePbKRvC.jpg',
+      title: 'Classic StarWars Tshirt',
+      brand: ' Fifth Sun',
+      description: 'Look at this cool Star Wars graphic tshirt I found!',
+      username: 'tshirtfiend',
+      imageLink: 'https://m.media-amazon.com/images/I/81WA7JOFGvS._AC_UX679_.jpg',
     },
     {
-      title: 'Test Image 7',
-      brand: 'brand here',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      username: 'testuser3',
-      imageLink: 'https://i.imgur.com/ePbKRvC.jpg',
+      title: 'Black Knight',
+      brand: '',
+      description: 'The latest in bridge security',
+      username: 'IlikeTee',
+      imageLink: 'https://m.media-amazon.com/images/I/A13usaonutL._CLa%7C2140%2C2000%7C8151HCKmNHL.png%7C0%2C0%2C2140%2C2000%2B0.0%2C0.0%2C2140.0%2C2000.0_AC_UX679_.png',
       comments: [
         comments[4],
         comments[5],
@@ -114,8 +113,8 @@ db.once('open', async () => {
 
   await User.create([
     {
-      username: 'testuser',
-      email: 'test@test.com',
+      username: 'destinyFan',
+      email: 'destinyFan@test.com',
       password: 'test123',
       tshirts: [
         tshirts[0]._id,
@@ -124,8 +123,8 @@ db.once('open', async () => {
       ]
     },
     {
-      username: 'testuser2',
-      email: 'test2@test.com',
+      username: 'tshirtfiend',
+      email: 'tshirtfiend@test.com',
       password: 'test123',
       tshirts: [
         tshirts[2]._id,
@@ -133,8 +132,8 @@ db.once('open', async () => {
       ]
     },
     {
-      username: 'testuser3',
-      email: 'test3@test.com',
+      username: 'IlikeTee',
+      email: 'IlikeTee@test.com',
       password: 'test123',
       tshirts: [
         tshirts[4]._id,
