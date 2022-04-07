@@ -18,7 +18,7 @@ const User = () => {
     console.log(_id);
     try {
       const { data } = await deleteTshirt({
-        variables: {_id: _id}
+        variables: { _id: _id }
       });
       console.log(data);
       window.location.replace('/user');
@@ -30,25 +30,28 @@ const User = () => {
   return (
     <div>
       <div className="main-area">
-      <img className="background" src={coverImage} alt="paradise scene"></img>
-        {userTShirts.map(({ _id, title, brand, description, imageLink }, i) => {
-          return (
-            <div key={i}>
-              <h3>{title}</h3>
-              <p>{brand}</p>
-              <p>{description}</p>
-              <img src={imageLink} />
-              <div className="button-wrapper">
-                <button onClick={() => window.location.replace(`/edit/${_id}`)}>
-                  Edit
-                </button>
-                <button onClick={() => handleDelete({ _id })}>
-                  Delete
-                </button>
+        <img className="background" src={coverImage} alt="paradise scene"></img>
+        <div className="user-container">
+          <h1>Your Tshirts</h1>
+          {userTShirts.map(({ _id, title, brand, description, imageLink }, i) => {
+            return (
+              <div key={i}>
+                <h3>{title}</h3>
+                <p>{brand}</p>
+                <p>{description}</p>
+                <img src={imageLink} alt='tshirt' />
+                <div className="button-wrapper">
+                  <button onClick={() => window.location.replace(`/edit/${_id}`)}>
+                    Edit
+                  </button>
+                  <button onClick={() => handleDelete({ _id })}>
+                    Delete
+                  </button>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );

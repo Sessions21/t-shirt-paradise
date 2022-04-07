@@ -82,6 +82,7 @@ function CreateTshirt() {
             <button className='createSubmit' type='submit'>Create</button>
           </fieldset>
         </form>
+        <div className='space-for-footer'></div>
       </div>
     </main>
   )

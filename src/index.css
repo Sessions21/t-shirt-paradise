@@ -227,6 +227,8 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
 }
 
 /* User main style */
@@ -243,6 +245,8 @@ a:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 10vh;
 }
 
 /* create style */
@@ -267,6 +271,7 @@ a:hover {
 
 .fieldSetCreate {
   margin: 1em 0;
+  margin-bottom: 10vh;
   padding: 1em 2em;
   border: 3px solid #9c6244;
   border-radius: 6px;
@@ -451,7 +456,7 @@ input:focus {
 /* Footer Styling */
 .footer {
   width: 100%;
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   z-index: 1000;
@@ -514,6 +519,9 @@ input:focus {
 .footer .social > a:hover {
   opacity: 0.9;
   color: white;
+}
+.space-for-footer {
+  height: 10vh;
 }
 
 @media (max-width: 1256px) {

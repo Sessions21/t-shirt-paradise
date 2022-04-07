@@ -6,13 +6,16 @@ import coverImage from "../assets/images/cover-3.png";
 const Gallery = () => {
 
   return (
-    <div className="gallery-container">
+    <div className="main-area">
       <img className="background" src={coverImage} alt="paradise scene"></img>
-      <h1 className="gallery title">T-Shirt Paradise User Submitted Gallery</h1>
-      <div className="tshirt-container">
-        <TshirtList>
-        </TshirtList>
+      <div className="gallery-container">
+        <h1 className="gallery title">T-Shirt Paradise User Submitted Gallery</h1>
+        <div className="tshirt-container">
+          <TshirtList>
+          </TshirtList>
+        </div>
       </div>
+      <div className='space-for-footer'></div>
     </div>
   );
 };
