@@ -214,22 +214,6 @@ a:hover {
   right: 12%;
 }
 
-.fieldSetSignup {
-  margin: 2em 0;
-  padding: 1em 2em;
-  border: 3px solid #9c6244;
-  border-radius: 6px;
-  min-width: 200px;
-  font-size: 1.25em;
-  font-weight: 500;
-}
-
-.fieldSetSignup p {
-  color: white;
-  font-weight: 400;
-  overflow: hidden;
-}
-
 .signupSubmit {
   padding: 0.5em 1em;
   border-radius: 6px;
@@ -253,6 +237,45 @@ a:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* create style */
+
+.createInput {
+  margin: 5px;
+  display: block;
+  overflow: hidden;
+}
+
+.createContainer {
+  width: 80vw;
+  height:29px;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+}
+
+.SignupLegend {
+  font-size: 1.75em;
+}
+
+.fieldSetCreate {
+  margin: 1em 0;
+  padding: 1em 2em;
+  border: 3px solid #9c6244;
+  border-radius: 6px;
+  min-width: 200px;
+  font-size: 1.25em;
+  font-weight: 500;
+}
+
+.createSubmit {
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  background-color: #294353;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 400;
 }
 
 /*Modal Style*/

@@ -40,33 +40,33 @@ const Signup = () => {
         <form className='formSignup' onSubmit={handleFormSubmit}>
           <fieldset className='fieldSetSignup'>
               <legend className='SignupLegend'>Register</legend>
-            <input
-              className='form-input'
-              placeholder='Create Username'
-              name='username'
-              type='username'
-              id='username'
-              value={formState.username}
-              onChange={handleChange}
-            />
-            <input
-              className='form-input'
-              placeholder='Enter Email'
-              name='email'
-              type='email'
-              id='email'
-              value={formState.email}
-              onChange={handleChange}
-            />
-            <input
-              className='form-input'
-              placeholder='Create Password'
-              name='password'
-              type='password'
-              id='password'
-              value={formState.password}
-              onChange={handleChange}
-            />
+                <input
+                  className='form-input'
+                  placeholder='Create Username'
+                  name='username'
+                  type='username'
+                  id='username'
+                  value={formState.username}
+                  onChange={handleChange}
+                />
+                <input
+                  className='form-input'
+                  placeholder='Enter Email'
+                  name='email'
+                  type='email'
+                  id='email'
+                  value={formState.email}
+                  onChange={handleChange}
+                />
+                <input
+                  className='form-input'
+                  placeholder='Create Password'
+                  name='password'
+                  type='password'
+                  id='password'
+                  value={formState.password}
+                  onChange={handleChange}
+                />
             <button className='signupSubmit' type='submit' >Submit</button>
           </fieldset>
         </form>

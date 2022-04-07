@@ -42,8 +42,8 @@ const TshirtList = ({ category }) => {
       )}
       <div className="flex-row">
         {tshirtData.map(
-          ({ title, username, imageLink, description, comments }) => (
-            <div>
+          ({ title, username, imageLink, description, comments }, i) => (
+            <div key={i}>
               <h2>
                 {title} By {username}
               </h2>
