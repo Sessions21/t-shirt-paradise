@@ -38,11 +38,12 @@ const TshirtList = ({ category }) => {
           ({ title, username, imageLink, description, comments }, i) => {
             return (
 
-              <div key={i}>
+              <div className="shirt-title" key={i}>
                 <h2>
-                  {title} By {username}
+                  {title}
+                  <p className="shirt-user"><span>By</span> {username}</p>
                 </h2>
-                <p>{description}</p>
+                <p className="shirt-description">{description}</p>
                 <img className="tshirt-image" src={imageLink} alt='tshirt' />
                 <p>{comments.commentBody}</p>
                 <button

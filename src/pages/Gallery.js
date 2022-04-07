@@ -9,7 +9,7 @@ const Gallery = () => {
     <div className="main-area">
       <img className="background" src={coverImage} alt="paradise scene"></img>
       <div className="gallery-container">
-        <h1 className="gallery title">T-Shirt Paradise User Submitted Gallery</h1>
+        <h1 className="gallery-title"><span>User</span> Submitted Gallery</h1>
         <div className="tshirt-container">
           <TshirtList>
           </TshirtList>
