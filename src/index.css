@@ -261,28 +261,37 @@ a:hover {
   width: 80vw;
   height: 29px;
   position: absolute;
-  top: 15%;
+  top: 16%;
   left: 10%;
 }
 
 .SignupLegend {
-  font-size: 1.75em;
+  font-size: 1.85em;
+  font-weight: bold;
 }
 
 .fieldSetCreate {
-  margin: 1em 0;
-  margin-bottom: 10vh;
-  padding: 1em 2em;
-  border: 3px solid #9c6244;
-  border-radius: 6px;
-  min-width: 200px;
-  font-size: 1.25em;
-  font-weight: 500;
+padding-left: 10rem;
+padding-bottom: 0;
+padding-top: 0;
 }
+
+.fieldSetCreate input {
+padding-left: 10rem;
+line-height: 20px;
+margin: 0;
+}
+
+.fieldSetCreate labe {
+padding-left: 10rem;
+line-height: 20px;
+margin: 0;
+}
+
 
 .createSubmit {
   padding: 0.5em 1em;
-  border-radius: 6px;
+  border-radius: px;
   background-color: #294353;
   color: white;
   font-size: 0.8em;
