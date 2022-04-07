@@ -56,6 +56,9 @@ function EditTshirt() {
         <textarea type='text' name='description' defaultValue={tshirt.description} onBlur={handleChange}></textarea>
         <label htmlFor='image-link'>Image Link</label>
         <input type='text' name='imageLink' defaultValue={tshirt.imageLink} onBlur={handleChange}></input>
+        {formState.imageLink ? (
+          <img src={formState.imageLink} alt='tshirt' />
+        ) : (null)}
         <button type='submit'>Submit</button>
       </form>
     </>
