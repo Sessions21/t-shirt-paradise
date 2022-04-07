@@ -8,7 +8,7 @@ const TshirtList = ({ category }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentTshirt, setCurrentTshirt] = useState();
 
-  const [Tshirts] = useState([]);
+  // const [Tshirts] = useState([]);
 
   // Fetch Data From Databasae
   const { loading, error, data } = useQuery(QUERY_ALLTSHIRTS);
@@ -17,7 +17,7 @@ const TshirtList = ({ category }) => {
     console.log(error);
   }
 
-  console.log({ loading: loading, data: data, error:error});
+  console.log({ loading: loading, data: data, error: error });
 
   const tshirtData = data?.tshirts || [];
 
@@ -26,9 +26,9 @@ const TshirtList = ({ category }) => {
   }
   // End fetch
 
-  const currentTshirts = Tshirts.filter(
-    (tshirt) => tshirt.category === category
-  );
+  // const currentTshirts = Tshirts.filter(
+  //   (tshirt) => tshirt.category === category
+  // );
 
   const toggleModal = () => {
     setCurrentTshirt({});
@@ -42,24 +42,27 @@ const TshirtList = ({ category }) => {
       )}
       <div className="flex-row">
         {tshirtData.map(
-          ({ title, username, imageLink, description, comments }) => (
-            <div>
-              <h2>
-                {title} By {username}
-              </h2>
-              <span>{imageLink}</span>
-              <span>{description}</span>
-              <span>{comments}</span>
-              <button
-                className="addComment"
-                onClick={() => {
-                  toggleModal();
-                }}
-              >
-                Comment
-              </button>
-            </div>
-          )
+          ({ title, username, imageLink, description, comments }, i) => {
+            return (
+
+              <div key={i}>
+                <h2>
+                  {title} By {username}
+                </h2>
+                <img src={imageLink} />
+                <span>{description}</span>
+                <p>{comments.commentBody}</p>
+                <button
+                  className="addComment"
+                  onClick={() => {
+                    toggleModal();
+                  }}
+                >
+                  Comment
+                </button>
+              </div>
+            )
+          }
         )}
       </div>
     </div>

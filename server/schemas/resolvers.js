@@ -18,7 +18,8 @@ const resolvers = {
     },
     tshirts: async () => {
       console.log("Called get all tshirts");
-      return await TShirt.find();
+      return await TShirt.find()
+        .populate('comments');
     },
   },
   Mutation: {
