@@ -1,22 +1,19 @@
 import React from 'react';
 
 const Modal = ({ onClose, currentTshirt }) => {
-  const { name, description, category, index } = currentTshirt;
+  const { title, description, category, index } = currentTshirt;
 
   return (
-    <div className="modalBackdrop">
+    <form className="modalBackdrop">
       <div className="modalContainer">
-        <h3 className="modalTitle">{name} </h3>
-        <img
-          src={require(`../assets/images/${category}/${index}.jpg`).default}
-          alt="current category"
-        />
-        <p>{description}</p>
+        <h3 className="modalTitle"> Add Your Comment Below </h3>
+        <input type="text" className="" id="" />
+        
         <button type="button" onClick={onClose}>
-          Close this modal
+          Add Comment
         </button>
       </div>
-    </div>
+    </form>
   );
 };
 
