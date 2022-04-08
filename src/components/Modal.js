@@ -6,10 +6,11 @@ const Modal = ({ onClose, currentTshirt }) => {
   return (
     <form className="modalBackdrop">
       <div className="modalContainer">
-        <h3 className="modalTitle"> Add Your Comment Below </h3>
-        <input type="text" className="" id="" />
-        
-        <button type="button" onClick={onClose}>
+        <h3 className="modalTitle">Add Your Comment Below </h3>
+        <div className='modalDiv'>
+        <textarea type="text" placeholder="" className="modalInput" id="" />
+        </div>
+        <button type="button" className='modalButton' onClick={onClose}>
           Add Comment
         </button>
       </div>
