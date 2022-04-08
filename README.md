@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# T-Shirt Paradise
+### Brought to you by: Smith Sales Inc.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![License: 'MIT License'](https://img.shields.io/badge/License-MIT-blue)
+------------------------------------------------------------------
 
-## Available Scripts
+## Description
+This application is a forum for T-Shirt enthusiasts to connect with others that have the same passion.  It allows users to create an accounts where they can upload some of their favorite T-Shirts or even express themselves by creating their own artistic T-Shirt mockup. Users can also view other's T-Shirts and provide comments on their thoughts.  It is a t-shirt lovers paradise!
 
-In the project directory, you can run:
+## Deployed Link
 
-### `npm start`
+ https://t-shirt-paradise.herokuapp.com/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* React
+* Node.js
+* Express.js
+* MongoDB / Mongoose
+* GraphQL
 
-### `npm test`
+## Table of Contents
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributions](#contributions)
+* [License](#license)
+* [Questions](#questions)
+* [Preview](#preview)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+No installation is required.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
 
-### `npm run eject`
+Simply follow the website URL. If you are a first time user you will need to create an account or login if you are a member. You will then be presented with options to create a T-Shirt display with your favorite T, or create a mock up version of a t-shirt idea living in your head.  You'll also have the option to view a gallary of shirts and comment on those you find the most interesting.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contributions:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Alexandros Vlamakis
+* Berke Forbes
+* Taylor Cannon
+* Scott Nichols
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ [Link to MIT License Details](https://choosealicense.com/licenses/mit/)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Tests
 
-### Code Splitting
+No tests 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Questions
+If you have questions:
+* [Github](https://github.com/Sessions21/t-shirt-paradise)
+* [Email](mailto:s21nichols@hotmail.com) 
 
-### Analyzing the Bundle Size
+## Preview
+![Screenshot-of-home-page](./src/assets/images/home-page.png)
+![Screenshot-of-login/signup](./src/assets/images/login-page.png)
+![Screenshot-of-tshirt-gallery]()
+![Screenshot-of-about-page](./src/assets/images/about-page.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
