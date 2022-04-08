@@ -81,7 +81,7 @@ db.once('open', async () => {
       title: 'Processing...',
       brand: 'Hanes',
       description: 'Something for developers',
-      username: 'IlikeTees',
+      username: 'IlikeTee',
       imageLink: 'https://m.media-amazon.com/images/I/71UQhfJQFkL._AC_UL320_.jpg',
       comments: [
         comments[3]

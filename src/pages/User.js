@@ -17,10 +17,9 @@ const User = () => {
   const handleDelete = async (_id) => {
     console.log(_id);
     try {
-      const { data } = await deleteTshirt({
+      await deleteTshirt({
         variables: { _id: _id }
       });
-      console.log(data);
       window.location.replace('/user');
     } catch (error) {
       console.log(error)
@@ -31,15 +30,15 @@ const User = () => {
     <div>
       <div className="main-area">
         <img className="background" src={coverImage} alt="paradise scene"></img>
+        <h1>Your Tshirts</h1>
         <div className="user-container">
-          <h1>Your Tshirts</h1>
           {userTShirts.map(({ _id, title, brand, description, imageLink }, i) => {
             return (
               <div key={i}>
                 <h3>{title}</h3>
                 <p>{brand}</p>
                 <p>{description}</p>
-                <img src={imageLink} alt='tshirt' />
+                <img className="tshirt-image" src={imageLink} alt='tshirt' />
                 <div className="button-wrapper">
                   <button onClick={() => window.location.replace(`/edit/${_id}`)}>
                     Edit

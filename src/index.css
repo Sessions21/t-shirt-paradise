@@ -247,13 +247,12 @@ a:hover {
 }
 
 .shirt-title h2 {
-  color:#3d627b;
+  color: #3d627b;
   font-weight: bold;
 }
 
-
 .shirt-title h2 span {
-  color:#9c6244;
+  color: #9c6244;
   font-weight: 300;
 }
 
@@ -264,7 +263,7 @@ a:hover {
 }
 
 .shirt-description {
-  color:#3d627b;
+  color: #3d627b;
   font-weight: 300;
   font-size: 1.25em;
 }
@@ -309,23 +308,22 @@ a:hover {
 }
 
 .fieldSetCreate {
-padding-left: 10rem;
-padding-bottom: 0;
-padding-top: 0;
+  padding-left: 10rem;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
-.fieldSetCreate input {
-padding-left: 10rem;
-line-height: 20px;
-margin: 0;
-}
+/* .fieldSetCreate input {
+  padding-left: 10rem;
+  line-height: 20px;
+  margin: 0;
+} */
 
 .fieldSetCreate labe {
-padding-left: 10rem;
-line-height: 20px;
-margin: 0;
+  padding-left: 10rem;
+  line-height: 20px;
+  margin: 0;
 }
-
 
 .createSubmit {
   padding: 0.5em 1em;
@@ -437,12 +435,13 @@ label:first-of-type {
 input {
   padding: 0.5em;
   border: solid 1px #3d627b;
+  width: 60%;
 }
 
-input[type="email"],
+/* input[type="email"],
 input[type="text"] {
   width: 20em;
-}
+} */
 
 textarea {
   height: 10vh;
@@ -569,6 +568,48 @@ input:focus {
 }
 .space-for-footer {
   height: 10vh;
+}
+
+.tshirt-image {
+  height: 500px;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  max-width: 100%;
+  height: 400px;
+  max-height: 100%;
+}
+
+.modalTitle {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 12px;
+  margin-bottom: 15px;
+}
+
+.modalDiv {
+  align-items: center;
+  margin-top: 25px;
+}
+
+.modalInput {
+  display: block;
+  font-size: 13pt;
+  height: 175px;
+  width: 500px;
+  resize: none;
+  margin: auto;
+}
+
+.modalButton {
+  margin-left: 60%;
+  margin-top: 25px;
 }
 
 @media (max-width: 1256px) {
