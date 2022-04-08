@@ -23,8 +23,12 @@ const TshirtList = ({ category }) => {
   }
   // End fetch
 
-  const toggleModal = () => {
-    setCurrentTshirt({});
+  // const currentTshirts = Tshirts.filter(
+  //   (tshirt) => tshirt.category === category
+  // );
+
+  const toggleModal = (title, i) => {
+    setCurrentTshirt({ ...title, index: i });
     setIsModalOpen(!isModalOpen);
   };
 
@@ -37,8 +41,7 @@ const TshirtList = ({ category }) => {
         {tshirtData.map(
           ({ title, username, imageLink, description, comments }, i) => {
             return (
-
-              <div className="shirt-title" key={i}>
+              <div key={i}>
                 <h2>
                   {title}
                   <p className="shirt-user"><span>By</span> {username}</p>
@@ -47,15 +50,15 @@ const TshirtList = ({ category }) => {
                 <img className="tshirt-image" src={imageLink} alt='tshirt' />
                 <p>{comments.commentBody}</p>
                 <button
-                  className="addComment"
                   onClick={() => {
-                    toggleModal();
+                    toggleModal(title);
                   }}
+                  className="addComment"
                 >
                   Comment
                 </button>
               </div>
-            )
+            );
           }
         )}
       </div>
