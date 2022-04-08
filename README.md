@@ -57,6 +57,7 @@ No tests
 
 ## Questions
 If you have questions:
+* [Heroku](https://t-shirt-paradise.herokuapp.com/)
 * [Github](https://github.com/Sessions21/t-shirt-paradise)
 * [Email](mailto:s21nichols@hotmail.com) 
 
