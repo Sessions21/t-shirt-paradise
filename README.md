@@ -62,9 +62,9 @@ If you have questions:
 * [Email](mailto:s21nichols@hotmail.com) 
 
 ## Preview
-![Screenshot-of-home-page](./src/assets/images/home-page.png)
-![Screenshot-of-login/signup](./src/assets/images/login-page.png)
-![Screenshot-of-login/gallery](./src/assets/images/gallery-page.png)
-![Screenshot-of-about-page](./src/assets/images/about-page.png)
+![Screenshot-of-home-page](./client/src/assets/images/home-page.png)
+![Screenshot-of-login/signup](./client/src/assets/images/login-page.png)
+![Screenshot-of-login/gallery](./client/src/assets/images/gallery-page.png)
+![Screenshot-of-about-page](./client/src/assets/images/about-page.png)
 
 
