@@ -3,7 +3,7 @@ import { validateEmail } from '../utils/helpers';
 import contactImage from "../assets/images/cover-3.png"
 
 const Contact = () => {
-  const [formState, setFormState ] = useState({ name: '', email: '', message: '' })
+  const [formState, setFormState] = useState({ name: '', email: '', message: '' })
   const { name, email, message } = formState;
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -13,7 +13,7 @@ const Contact = () => {
       console.log('Submit Form', formState);
     }
   };
-  
+
   const handleChange = (e) => {
     if (e.target.name === 'email') {
       const isValid = validateEmail(e.target.value);
@@ -43,26 +43,27 @@ const Contact = () => {
         <form id="contact-form" onSubmit={handleSubmit}>
           <fieldset>
             <legend>Contact Us</legend>
-              <label htmlFor="name">Name:</label>
-              <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
+            <label htmlFor="name">Name:</label>
+            <input type="text" name="name" defaultValue={name} onBlur={handleChange} />
 
-              <label htmlFor="email">Email address:</label>
-              <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
+            <label htmlFor="email">Email address:</label>
+            <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
 
-              <label htmlFor="message">Message:</label>
-              <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
+            <label htmlFor="message">Message:</label>
+            <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
 
-            {errorMessage && (
-              <div>
+            <div>
+              {errorMessage && (
                 <p className="error-text">{errorMessage}</p>
-              </div>
-            )}
+              )}
+            </div>
+
             <button data-testid="button" type="submit" className='contactSubmit'>Submit</button>
           </fieldset>
         </form>
       </section>
     </div>
-    
+
   );
 }
 

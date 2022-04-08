@@ -313,11 +313,11 @@ a:hover {
   padding-top: 0;
 }
 
-.fieldSetCreate input {
+/* .fieldSetCreate input {
   padding-left: 10rem;
   line-height: 20px;
   margin: 0;
-}
+} */
 
 .fieldSetCreate labe {
   padding-left: 10rem;
@@ -435,12 +435,13 @@ label:first-of-type {
 input {
   padding: 0.5em;
   border: solid 1px #3d627b;
+  width: 60%;
 }
 
-input[type="email"],
+/* input[type="email"],
 input[type="text"] {
   width: 20em;
-}
+} */
 
 textarea {
   height: 10vh;
