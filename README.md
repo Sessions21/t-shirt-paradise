@@ -63,7 +63,7 @@ If you have questions:
 ## Preview
 ![Screenshot-of-home-page](./src/assets/images/home-page.png)
 ![Screenshot-of-login/signup](./src/assets/images/login-page.png)
-![Screenshot-of-tshirt-gallery]()
+![Screenshot-of-login/gallery](./src/assets/images/gallery-page.png)
 ![Screenshot-of-about-page](./src/assets/images/about-page.png)
 
 
